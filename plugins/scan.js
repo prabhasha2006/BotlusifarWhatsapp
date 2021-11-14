@@ -1,17 +1,18 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy
-Instagram: www.instagram.com/kyrie.baran
+
+/* Copyright (C) 2021 LUSIFAR-KAVISHKA
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+LUSIFAR - KAVISHKA
 */
 
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
-
 const Language = require('../language');
 const Lang = Language.getString('tagall');
 
 if (Config.WORKTYPE == 'private') {
-    MyPnky.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: Lang.SCAN}, (async (message, match) => { 
+    lusifar.addCommand({ pattern: 'scan ?(.*)', fromMe: true, desc: Lang.SCAN}, (async (message, match) => { 
 
         if (match[1] == '') return await message.client.sendMessage(message.jid, Lang.NO, MessageType.text);
 
@@ -25,7 +26,7 @@ if (Config.WORKTYPE == 'private') {
     }));
 }
 else if (Config.WORKTYPE == 'public') {
-    MyPnky.addCommand({ pattern: 'scan ?(.*)', fromMe: false, desc: Lang.SCAN}, (async (message, match) => { 
+    lusifar.addCommand({ pattern: 'scan ?(.*)', fromMe: false, desc: Lang.SCAN}, (async (message, match) => { 
 
         if (match[1] == '') return await message.client.sendMessage(message.jid, Lang.NO, MessageType.text);
 
