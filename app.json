@@ -9,7 +9,7 @@
     "stack": "container",
     "env": {
         "LUSIFAR_SESSION": {
-            "description": "Qr.Js ile oluşturduğunuz özel session kodu. Type here yours Asena Session.",
+            "description": "Qr.Js ile oluşturduğunuz özel session kodu. Type here yours Lusifar Session.",
             "required": true
         },
         "SUDO": {
