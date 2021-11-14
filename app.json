@@ -21,10 +21,10 @@
             "required": true,
             "value": "en"
         },
-        "WEL_GIF": {
+        "WELCOME_GIF": {
             "description": "Fill here any gif link if you selected gif as WEELCOME",
             "required": false,
-            "value": "false"
+            "value": "https://i.imgur.com/nErXUGj.mp4"
         },
         "Z_PINKY_AI": {	
             "description": "turn on chat back auto reply lusifar (use true to on and fale to off)",	
@@ -69,7 +69,7 @@
           "BYE_GIF": {
             "description": "Fill here any gif link if you selected gif as WEELCOME",
             "required": false,
-            "value": "false"
+            "value": "https://i.imgur.com/Z1jCYGN.mp4"
         },
          "BGM_FILTER": {
             "description": "If you likes bgm you can write 'true'. Otherwise false",
