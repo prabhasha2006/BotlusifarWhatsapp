@@ -31,7 +31,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     }
     
     if (config.LANG == 'SI') {
-        l_dsc = ' විධානයේ විස්තර ඔන් ඕෆ් කිරීම'
+        l_dsc = '.video විධානයේ විස්තර ඔන් ඕෆ් කිරීම'
         YT_INFO_on = '*YT INFO සක්‍රීය වී ඇත*'
         YT_INFO_off = '*YT INFO අක්‍රීය වී ඇත*'
     }
