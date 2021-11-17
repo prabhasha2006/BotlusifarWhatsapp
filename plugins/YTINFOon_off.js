@@ -1,5 +1,5 @@
 /*powerd by kaviyaah
-Lusifar - kavishka
+Lusifar - kavishkaඋස්සම් පලයම් උස්සන් පලයම්.රටට බරකි නුබ 
 */
 
 
