@@ -1,3 +1,4 @@
+/*
 const lusifar = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
@@ -47,3 +48,4 @@ const tk = Config.WORKTYPE == 'public' ? false : true
         )
       },
     )
+*/
