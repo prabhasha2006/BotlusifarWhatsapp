@@ -39,13 +39,18 @@
         "Z_DEP_NAME": {	
             "description": "bot deployer name make it short  (for auto reply Lusifar to identify)",	
             "required": false,	
-            "value": "plk"	
+            "value": "kavishka"	
         },	
         "Z_DEP_REPLY": {	
             "description": "enter the reply message you want when deployer name is typed by users  (for auto reply pink to identify)",	
             "required": false,	
             "value": "i know him he is my creator"	
         },	
+            "YT_INFO": {	
+            "description": "Show you tube video infomation  ",	
+            "required": true,	
+            "value": "true"	
+        },
             "TIME_ZONE": {
             "description": "type your time zone (pass this sri lankan users) ",
             "required": false,
