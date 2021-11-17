@@ -17,7 +17,7 @@ const Ln = "*▷Lusifar මීම් ලැයිස්තුව ඔබට අ�
 const code = "*╔═════◉Lusifar◉═════╗*\n           Lusifar Bot\n*❖═මීම් ලැයිස්තුව  Meme Pack═❖*\n\n*💠.yasai       ❴your text❵*\n*💠.uddika    ❴your text❵*\n*💠.aah          ❴your text❵*\n*💠.sir            ❴your text❵*\n*💠.my3         ❴your text❵*\n*💠.fuck         ❴your text❵*\n*💠.hii             ❴your text❵*\n*💠.asai          ❴your text❵*\n*💠.hapoi       ❴your text❵*\n*💠.anura       ❴your text❵*\n*💠.gemba       ❴your text❵*\n*💠.wow       ❴your text❵*\n*💠.hapo       ❴your text❵*\n*💠.babah       ❴your text❵*\n*💠.mcn       ❴your text❵*\n*💠.nah       ❴your text❵*\n*╚═══❖══▣══▣══❖═══╝*\n\n*"
 let td = Config.WORKTYPE == 'public' ? false : true
     
-      lusifar.addCommand({pattern: 'mmpack', fromMe: td, desc: Lang.MMPACK,}, (async (message, match) => {
+      lusifar.addCommand({pattern: 'mmpack', fromMe: td, desc: 'Create meme',}, (async (message, match) => {
 
     await message.client.sendMessage(
   
