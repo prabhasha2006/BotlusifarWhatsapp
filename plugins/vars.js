@@ -266,41 +266,6 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     }));
 
 
- var plk_desc = ''
- var BGM_ONE = ''
- var BGM_TWO = ''
-
-    if (config.LANG == 'SI') {
-      
-        plk_desc = 'ස්ව්‍යංක්‍රීය ස්ටිකර් පණිවිඩ සක්‍රීය කිරිම හා අක්‍රීය කිරීම'
-        STR_ON = 'ස්ව්‍යංක්‍රීය ස්ටිකර් පනිවිඩ යැවීම සක්‍රීය කරන ලදී​'
-        STR_OFF = 'ස්ව්‍යංක්‍රීය ස්ටිකර් පනිවිඩ යැවීම අක්‍රීය කරන ලදී​'
-    }
-    if (config.LANG == 'EN') {
-    
-    plk_desc = 'to turn on and off auto sticker'
-    STR_ON = '🇦​🇺​🇹​🇴​ 🇸​🇹​🇮​🇨​🇰​🇪​🇷​ 🇹​🇺​🇷​🇳​🇪​🇩​ 🇴​🇳​'
-    STR_OFF = '🇦​🇺​🇹​🇴​ 🇸​🇹​🇮​🇨​🇰​🇪​🇷​ 🇹​🇺​🇷​🇳​🇪​🇩​ 🇴​🇫​🇫​'
-    }
-
-
- MyPnky.addCommand({pattern: 'autosticker ?(.*)', fromMe: true, desc: plk_desc, usage: '.autosticker on / off' }, (async (message, match) => {
-        if (match[1] == 'on') {
-                await heroku.patch(baseURI + '/config-vars', { 
-                    body: { 
-                        ['STICKER_REPLY']: 'true'
-                    } 
-                });
-                await message.sendMessage(STR_ON)
-        } else if (match[1] == 'true') {
-                await heroku.patch(baseURI + '/config-vars', { 
-                    body: { 
-                        ['STICKER_REPLY']: 'false'
-                    } 
-                });
-                await message.sendMessage(STR_OFF)
-        }
-    }));
 
     
  var W_PUB = ''
