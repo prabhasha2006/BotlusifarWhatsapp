@@ -9,13 +9,13 @@ lusifar - kavishka
 const simpleGit = require('simple-git');
 const git = simpleGit();
 const lusifar = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
+const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const Config = require('../config');
 const exec = require('child_process').exec;
 const Heroku = require('heroku-client');
 const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
-
+const axios = require('axios');
 const Language = require('../language');
 const Lang = Language.getString('updater');
 
