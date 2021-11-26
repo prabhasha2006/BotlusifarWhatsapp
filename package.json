@@ -2,28 +2,28 @@
   "name": "Lusifar",
   "version": "7.3.6",
   "description": "Lusifar is the Modified Version of WhatsAsena.",
-  "main": "./Pinky_V2/bot.js",
+  "main": "./BotlusifarWhatsapp/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/afnanplk/Pinky_V.git"
+    "url": "git+https://github.com/kavishkaya/BotlusifarWhatsapp.git"
   },
   "keywords": [
     "whatsapp",
     "bot",
     "ai",
-    "Pinky",
-    "Afnanplk"
+    "Lusifar",
+    "Kavishka"
   ],
-  "author": "Afnanplk",
-  "developer": "@afnanplk",
+  "author": "Kavishka",
+  "developer": "@kavishka",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com//afnanplk/Pinky_V/issues"
+    "url": "https://github.com/kavishkaya/BotlusifarWhatsapp/issues"
   },
-  "homepage": "https://github.com//afnanplk/Pinky_V#readme",
+  "homepage": "https://github.com/kavishkaya/BotlusifarWhatsapp#readme",
   "dependencies": {
     "@adiwajshing/baileys": "3.5.3",
     "@lh2020/speedtest-net": "^2.1.1",
