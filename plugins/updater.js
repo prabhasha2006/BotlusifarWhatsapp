@@ -35,7 +35,7 @@ lusifar.addCommand({pattern: 'update$', fromMe: true, dontAddCommandList: true, 
     if (commits.total === 0) {
         
         var webimage = await axios.get(`${uplogonew}`, { responseType: 'arraybuffer' })
-        await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: Lang.UPDATE +'\n\n\n\n\n\n\n\n\n\n *⚡powerd by lusifar*' })
+        await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: '\n\n\n\n\n\n' + Lang.UPDATE +'\n\n\n\n *⚡powerd by lusifar*' })
     
     } else {
         var newzels = Lang.NEW_UPDATE;
