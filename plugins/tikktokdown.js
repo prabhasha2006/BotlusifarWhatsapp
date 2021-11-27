@@ -32,7 +32,7 @@ lusifar.addCommand({ pattern: 'tiktok ?(.*)', fromMe: Kaviyaah, desc: "downloadi
 							responseType: 'arraybuffer'
 						})
                         await message.sendMessage('👻 *Tiktok Video Uploading*  \n'+Lang.UPLOADING_VIDEO)
-						await message.sendMessage(Buffer.from(linkdata.data), MessageType.video, {
+						await message.sendMessage(Buffer.from(linkdata.data), MessageType.video,{quoted: message.data} ,  {
 								caption: '*CHANNEL AUTHOR* '+ author + '\n\n' + capt
 						})
 							.catch(
@@ -61,7 +61,7 @@ lusifar.addCommand({ pattern: 'tiktok ?(.*)', fromMe: btmy, desc: "downloading t
 							responseType: 'arraybuffer'
 						})
                         await message.sendMessage('👻 *Tiktok Video Uploading*  \n'+Lang.UPLOADING_VIDEO)
-						await message.sendMessage(Buffer.from(linkdata.data), MessageType.video, {
+						await message.sendMessage(Buffer.from(linkdata.data), MessageType.video, {quoted: message.data} , {
 								caption: '*CHANNEL AUTHOR:* ' + author + '\n\n' + capt
 						})
 							.catch(
