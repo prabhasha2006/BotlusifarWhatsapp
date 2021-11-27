@@ -2,7 +2,7 @@
 Powerd by kaviyaah - lusifar
 ussana eka maka bawiyam tahukanna
 */
-const Asena = require('../events');
+const lusifar = require('../events');
 const {MessageType,mimetype,Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
@@ -13,7 +13,7 @@ let Kaviyaah = Config.WORKTYPE == 'public' ? false : true
 let btmy = Config.WORKTYPE == 'public' ? true : false
 
 	
-Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: Kaviyaah, desc: "downloading tik tok videos"}, async (message, match) => {
+lusifar.addCommand({ pattern: 'tiktok ?(.*)', fromMe: Kaviyaah, desc: "downloading tik tok videos"}, async (message, match) => {
 
     const link = match[1]
 
@@ -42,7 +42,7 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: Kaviyaah, desc: "downloading
 					
 }) //pattern close
   
-Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: btmy, desc: "downloading tik tok videos"}, async (message, match) => {
+lusifar.addCommand({ pattern: 'tiktok ?(.*)', fromMe: btmy, desc: "downloading tik tok videos"}, async (message, match) => {
 
     const link = match[1]
 
