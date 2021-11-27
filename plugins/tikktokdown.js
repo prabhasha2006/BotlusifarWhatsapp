@@ -19,7 +19,7 @@ lusifar.addCommand({ pattern: 'tiktok ?(.*)', fromMe: Kaviyaah, desc: "downloadi
 
     if (!link) return await message.sendMessage(" *Give Vaild Tiktok Link* ")
 
-    await message.sendMessage('👻 *Tiktok Video Downloading*  \n'+Lang.DOWNLOADING_VIDEO)
+    await message.sendMessage('👻 *Tiktok Video Downloading*  \n')
 
 				await axios
 					.get(`https://zenzapi.xyz/api/downloader/tiktok2?url=${link}&apikey=f55909b302`)
@@ -48,7 +48,7 @@ lusifar.addCommand({ pattern: 'tiktok ?(.*)', fromMe: btmy, desc: "downloading t
 
     if (!link) return await message.sendMessage(" *Give Vaild Tiktok Link* ")
 
-    await message.sendMessage('👻 *Tiktok Video Downloading*  \n'+Lang.DOWNLOADING_VIDEO)
+    await message.sendMessage('👻 *Tiktok Video Downloading*  \n')
 
 				await axios
 					.get(`https://zenzapi.xyz/api/downloader/tiktok2?url=${link}&apikey=f55909b302`)
@@ -60,7 +60,7 @@ lusifar.addCommand({ pattern: 'tiktok ?(.*)', fromMe: btmy, desc: "downloading t
 						const linkdata = await axios.get(url, {
 							responseType: 'arraybuffer'
 						})
-                        await message.sendMessage('👻 *Tiktok Video Uploading*  \n'+Lang.UPLOADING_VIDEO)
+                        await message.sendMessage('👻 *Tiktok Video Uploading*  \n')
 						await message.sendMessage(Buffer.from(linkdata.data), MessageType.video, {quoted: message.data} , {
 								caption: '*CHANNEL AUTHOR:* ' + author + '\n\n' + capt
 						})
