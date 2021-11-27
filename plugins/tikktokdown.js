@@ -1,36 +1,39 @@
-
+/*
+Powerd by kaviyaah - lusifar
+ussana eka maka bawiyam tahukanna
+*/
 const Asena = require('../events');
 const {MessageType,mimetype,Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
-const ALang = Language.getString('amazone');
 const capt = " *Lusifar Tiktok Downloader* \n"
+let Kaviyaah = Config.WORKTYPE == 'public' ? false : true
+let btmy = Config.WORKTYPE == 'public' ? true : false
 
-if (Config.WORKTYPE == 'public') {
 	
-Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: "downloading tik tok videos"}, async (message, match) => {
+Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: Kaviyaah, desc: "downloading tik tok videos"}, async (message, match) => {
 
     const link = match[1]
 
     if (!link) return await message.sendMessage(" *Give Vaild Tiktok Link* ")
 
-    await message.sendMessage('👻 *Tiktok Video Downloader*  \n'+Lang.DOWNLOADING_VIDEO)
+    await message.sendMessage('👻 *Tiktok Video Downloading*  \n'+Lang.DOWNLOADING_VIDEO)
 
 				await axios
-					.get(`https://zenzapi.xyz/api/downloader/tiktok?url=${link}&apikey=5c3ceca04a58`)
+					.get(`https://zenzapi.xyz/api/downloader/tiktok2?url=${link}&apikey=f55909b302`)
 					.then(async(response) => {
 						const {
-							nowatermark
+							url,author
 						} = response.data.result
 
-						const linkdata = await axios.get(nowatermark, {
+						const linkdata = await axios.get(url, {
 							responseType: 'arraybuffer'
 						})
-
+                        await message.sendMessage('👻 *Tiktok Video Uploading*  \n'+Lang.UPLOADING_VIDEO)
 						await message.sendMessage(Buffer.from(linkdata.data), MessageType.video, {
-								caption: capt,
+								caption: '*CHANNEL AUTHOR* '+ author + '\n\n' + capt
 						})
 							.catch(
 								async(err) => await message.sendMessage("⛔️ *INVALID TIKTOK LINK*"),
@@ -39,66 +42,32 @@ Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: "downloading ti
 					
 }) //pattern close
   
-  Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, dontAddCommandList:true}, async (message, match) => {
+Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: btmy, desc: "downloading tik tok videos"}, async (message, match) => {
 
     const link = match[1]
 
     if (!link) return await message.sendMessage(" *Give Vaild Tiktok Link* ")
 
-    await message.sendMessage('👻 *Tiktok Video Downloader*  \n'+Lang.DOWNLOADING_VIDEO)
+    await message.sendMessage('👻 *Tiktok Video Downloading*  \n'+Lang.DOWNLOADING_VIDEO)
 
 				await axios
-					.get(`https://zenzapi.xyz/api/downloader/tiktok?url=${link}&apikey=5c3ceca04a58`)
+					.get(`https://zenzapi.xyz/api/downloader/tiktok2?url=${link}&apikey=f55909b302`)
 					.then(async(response) => {
 						const {
-							nowatermark
+							url,author
 						} = response.data.result
 
-						const linkdata = await axios.get(nowatermark, {
+						const linkdata = await axios.get(url, {
 							responseType: 'arraybuffer'
 						})
-
+                        await message.sendMessage('👻 *Tiktok Video Uploading*  \n'+Lang.UPLOADING_VIDEO)
 						await message.sendMessage(Buffer.from(linkdata.data), MessageType.video, {
-								caption: capt,
+								caption: '*CHANNEL AUTHOR:* ' + author + '\n\n' + capt
 						})
 							.catch(
 								async(err) => await message.sendMessage("⛔️ *INVALID TIKTOK LINK*"),
 							)
 					})
 					
-}) //pattern close
-  
-} /* public close*/
+}) 
 
-else if (Config.WORKTYPE == 'private') {
-  
-  Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, dontaddCommandList:false}, async (message, match) => {
-
-    const link = match[1]
-
-    if (!link) return await message.sendMessage(" *Give Vaild Tiktok Link* ")
-
-    await message.sendMessage('👻 *Tiktok Video Downloader* 🕊 \n'+Lang.DOWNLOADING_VIDEO)
-
-				await axios
-					.get(`https://zenzapi.xyz/api/downloader/tiktok?url=${link}&apikey=5c3ceca04a58`)
-					.then(async(response) => {
-						const {
-							nowatermark
-						} = response.data.result
-
-						const linkdata = await axios.get(nowatermark, {
-							responseType: 'arraybuffer'
-						})
-
-						await message.sendMessage(Buffer.from(linkdata.data), MessageType.video, {
-								caption: capt,
-						})
-							.catch(
-								async(err) => await message.sendMessage("⛔️ *INVALID TIKTOK LINK*"),
-							)
-					})
-					
-}) //pattern close
-  
-} 
