@@ -20,21 +20,14 @@ const Language = require('../language');
 const Lang = Language.getString('updater');
 
 //උස්සන උන්ගෙ රෙපෝ කෙලවිලාම පලයම්
-var logoimage = new Array ();
 
-logoimage[0] = "https://telegra.ph/file/863a715abb69894732eaf.jpg";
-logoimage[1] = "https://telegra.ph/file/863a715abb69894732eaf.jpg";
-
-  var i = Math.floor(2*Math.random())
-
-  var uplogonew = logoimage[i]    
 
 lusifar.addCommand({pattern: 'update$', fromMe: true, dontAddCommandList: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
         
-        var webimage = await axios.get(`${uplogonew}`, { responseType: 'arraybuffer' })
+        var webimage = await axios.get(`https://telegra.ph/file/2b96f9eaba69490ae689d.jpg`, { responseType: 'arraybuffer' })
         await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: '\n\n\n\n\n\n' + Lang.UPDATE +'\n\n\n\n *⚡powerd by lusifar*' })
     
     } else {
@@ -45,7 +38,7 @@ lusifar.addCommand({pattern: 'update$', fromMe: true, dontAddCommandList: true, 
             }
         );
         
-        var webimage = await axios.get(`${uplogonew}`, { responseType: 'arraybuffer' })
+        var webimage = await axios.get(`https://telegra.ph/file/854891a5905bf54613062.jpg`, { responseType: 'arraybuffer' })
         await message.client.sendMessage(message.jid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: newzels + '```'+'\n\n *⚡powerd by lusifar*' })
         
     }
