@@ -28,7 +28,7 @@ KAVISHKA.addCommand({ pattern: 'xnx ?(.*)', fromMe: tp1, dontAddCommandList:true
   
         await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data}); 
 		
-		var url = `https://zenzapi.xyz/api/downloader/xnxx?url=${link}&apikey=alexabot`
+		var url = `https://zenzapi.xyz/api/downloader/xnxx?url=${link}&apikey=f55909b302`
 		
         await axios
           .get(`${url}`) // Request Code
@@ -65,7 +65,7 @@ KAVISHKA.addCommand({ pattern: 'xnx ?(.*)', fromMe: tp1, dontAddCommandList:true
   
         await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data}); 
 		
-		var url = `https://zenzapi.xyz/api/downloader/xnxx?url=${link}&apikey=alexabot`
+		var url = `https://zenzapi.xyz/api/downloader/xnxx?url=${link}&apikey=f55909b302`
 		
         await axios
           .get(`${url}`) // Request Code
