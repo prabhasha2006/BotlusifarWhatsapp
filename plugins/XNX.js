@@ -20,7 +20,7 @@ const credit = "* Powered BY Lusifar \n kavishka*"
 let tp1 = Config.WORKTYPE == 'public' ? false : true
 let tp2 = Config.WORKTYPE == 'public' ? true : false
 
-KAVISHKA.addCommand({ pattern: 'xnx ?(.*)', fromMe: tp1, desc: Xdesc, deleteCommand: false}, async (message, match) => {
+KAVISHKA.addCommand({ pattern: 'xnx ?(.*)', fromMe: tp1, dontAddCommandList:true}, async (message, match) => {
 
         const link = match[1] // 😡 අදත් ආවද Code එක උස්සන්න තිරිසනො  😖
     
