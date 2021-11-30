@@ -39,7 +39,7 @@ Ramiya.addCommand({ pattern: 'getxnx ?(.*)', fromMe: tp1 , dontAddCommandList:tr
       if (match[1] === '') return await message.client.sendMessage(message.jid,Need,MessageType.text);    
 	        await message.client.sendMessage(message.jid,Searching,MessageType.text);
 
-			var url = `https://zenzapi.xyz/api/xnxx/search?query=${match[1]}&apikey=alexabot`
+			var url = `https://zenzapi.xyz/api/xnxx/search?query=${match[1]}&apikey=f55909b302`
 			
 			const header = `*◄━━━━━━⦁⦁◯⦁⦁━━━━━━►*
  *Lusifar XNXX SEARCH* 
@@ -63,7 +63,7 @@ Ramiya.addCommand({ pattern: 'getxnx ?(.*)', fromMe: tp2 ,dontAddCommandList:tru
       if (match[1] === '') return await message.client.sendMessage(message.jid,Need,MessageType.text);    
 	        await message.client.sendMessage(message.jid,Searching,MessageType.text);
 
-			var url = `https://zenzapi.xyz/api/xnxx/search?query=${match[1]}&apikey=alexabot`
+			var url = `https://zenzapi.xyz/api/xnxx/search?query=${match[1]}&apikey=f55909b302`
 			
 			const header = `*◄━━━━━━⦁⦁◯⦁⦁━━━━━━►*
  *Lusifar XNXX SEARCH*
