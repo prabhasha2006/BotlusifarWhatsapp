@@ -21,6 +21,11 @@
             "required": true,
             "value": "en"
         },
+            "WELCOME_GIF": {
+            "description": "your panel working for this command. enter a command you like",
+            "required": false,
+            "value": "lusifar"
+        },
         "WELCOME_GIF": {
             "description": "Fill here any gif link if you selected gif as WEELCOME",
             "required": false,
