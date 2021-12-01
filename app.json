@@ -21,7 +21,7 @@
             "required": true,
             "value": "en"
         },
-            "WELCOME_GIF": {
+            "PANEL_COMMAND": {
             "description": "your panel working for this command. enter a command you like",
             "required": false,
             "value": "lusifar"
