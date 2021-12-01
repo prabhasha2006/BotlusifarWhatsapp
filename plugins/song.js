@@ -2,7 +2,7 @@
 /* 🆕Copyright (C) 2020  kavishka sandaruwan - lusifar
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-kavishka sandaruwan - lusifar
+kavishka sandaruwan - lusifar*/
 
 const lusifar = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
@@ -115,7 +115,7 @@ const Clang = Language.getString('covid');
                 await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false, quoted: message.data});
             });
     }));
-*/
+
 
 
 
@@ -124,7 +124,7 @@ const Clang = Language.getString('covid');
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 kavishka sandaruwan - lusifar
-*/
+
 
 
 const lusifar = require('../events');
@@ -183,5 +183,5 @@ let KSK = config.WORKTYPE == 'public' ? false : true
           async (err) => await message.client.sendMessage(message.jid,NO_RESULT,MessageType.text, {quoted: message.data}),
         )
       },
-    )
+    )*/
 
