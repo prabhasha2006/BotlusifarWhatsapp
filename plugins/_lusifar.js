@@ -1,9 +1,8 @@
 
 
 
-/* Copyright (C) 2020 Yusuf Usta.
-re-editted by afnanplk
-Pinky V2 
+/* Copyright (C) 2020 kavishka- sandaruwan
+lusifar - kavishka
 */
 
 const lusifar = require('../events');
