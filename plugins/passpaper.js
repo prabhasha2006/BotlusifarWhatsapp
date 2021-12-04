@@ -1,4 +1,6 @@
-
+/*
+ane whutto ussanna epa
+*/
 const lusifar = require('../events');
 const Config = require('../config');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
