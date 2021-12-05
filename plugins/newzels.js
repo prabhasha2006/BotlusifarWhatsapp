@@ -1,11 +1,10 @@
 
-/* Copyright (C) 2021 TENUX-Neotro.
-Licensed under the  GPL-3.0 License;
-you may not use this file except in compliance with the License.
-NEOTROX - TEENUHX බටන් බලන්නත ආවෙ 😂 මේකත් උස්සපන් චීත්තයක් නෙ උබ තමා අපෙ එව්වා උස්සන්නෙ
+/* Copyright (C) 2021 kavishka - lusifar
+ane whukapam.amaruwen hadwe awa ussanna
+බටන් බලන්නත ආවෙ 😂 මේකත් උස්සපන් චීත්තයක් නෙ උබ තමා අපෙ එව්වා උස්සන්නෙ
 */
 
-const Amazone = require('../events');
+const lusifar = require('../events');
 const {
     MessageType,
     GroupSettingChange,
@@ -20,7 +19,7 @@ const os = require('os');
 
 let tk = Config.WORKTYPE == 'public' ? false: true
 
-Amazone.addCommand({ pattern: 'npmenu', fromMe: tk, desc: 'down;load passpepr'
+lusifar.addCommand({ pattern: 'ol paper', fromMe: tk, desc: 'down;load passpepr'
 }, (async (message, match) => {
         // send a list main  subject
        const rows15 =[{title: ' 🗃️2015 O/L Main Subjects Papers🗃️ ', description:    "《《=====●|:|🔅|:|●=====》》\n\n📘 *Subject* - _සිංහල_\n🔹 *Command* - ```osin 2015```\n\n📘 *Subject* - _විද්‍යාව_\n🔹 *Command* - ```osci 2015```\n\n📘 *Subject* - _ගණිතය_\n🔹 *Command* - ```omaths 2015```\n\n📘 *Subject* - _ඉතිහාසය_\n🔹 *Command* - ```ohis 2015```\n\n📘 *Subject* - _ඉංග්‍රීසි_\n🔹 *Command* - ```oen 2015```\n\n📘 *Subject* - _බුද්ධ ධර්මය_\n🔹 *Command* - ```obu 2015``` ", rowId: "rowid1"},
