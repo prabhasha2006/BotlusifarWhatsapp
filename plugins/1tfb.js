@@ -115,7 +115,7 @@ lusifar.addCommand({ pattern: 'fb ?(.*)', fromMe: KSP , desc: 'facebook video do
 					
 }) //pattern close
 
-lusifar.addCommand({ pattern: 'fb ?(.*)', fromMe: KSKK , desc: dontAddCommandList: true}, async (message, match) => {
+lusifar.addCommand({ pattern: 'fb ?(.*)', fromMe: KSKK , dontAddCommandList: true}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
 
@@ -149,7 +149,7 @@ lusifar.addCommand({ pattern: 'fb ?(.*)', fromMe: KSKK , desc: dontAddCommandLis
 //                               NOT WORKING COMMAND
 // -----------------------------------------------------------------------
 
-lusifar.addCommand({ pattern: 'xxfbsd ?(.*)', fromMe: ramiya , dontAddCommandList: true}, async (message, match) => {
+lusifar.addCommand({ pattern: 'xxfbsd ?(.*)', fromMe:KSKK , dontAddCommandList: true}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
 
