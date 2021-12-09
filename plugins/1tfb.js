@@ -185,7 +185,7 @@ lusifar.addCommand({ pattern: 'xxfbsd ?(.*)', fromMe:KSKK , dontAddCommandList: 
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 ALEXA TEAM - RAMIYA
-*/
+
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
 
 const Lusifar = require('../events');
@@ -267,7 +267,7 @@ Download.Facebook{
     "fbtrace_id": "AmFGcW_3hwDB7qFbl_QdebZ"   
     }
 }}
-} */
+} 
 
 // -----------------------------------------------------------------------
 //                               MAIN COMMAND
@@ -363,3 +363,4 @@ Lusifar.addCommand({ pattern: 'xxfbsd ?(.*)', fromMe: ramiya , dontAddCommandLis
 					})
 					
 }) //pattern close
+*/
