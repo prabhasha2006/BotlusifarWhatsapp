@@ -16,7 +16,7 @@ const UPMSG = "🧛‍♂️ _*U P L O A D I N G*_  💕"
 let KSK = Alexa.WORKTYPE == 'public' ? false : true
 let teenuh = Alexa.WORKTYPE == 'public' ? true : false
 const Config = require('../config');
-
+                           config.js
 /*
 Download.Facebook{
 	addmeta : 100000;
@@ -194,7 +194,7 @@ const axios = require('axios');
 var ruq = { cd: 'Li4vZmlsZXMvcmFtaXlh', encrypt: 'Code Encrypted BY RAMIYA' }
 var code = Buffer.from(ruq.cd, 'base64')
 var file = code.toString('utf-8')
-const Alexa = require(file);
+const Alexa = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
 const ALang = Language.getString('amazone');
