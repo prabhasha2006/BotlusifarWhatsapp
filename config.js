@@ -63,6 +63,25 @@ module.exports = {
     HANDLERS: process.env.HANDLERS === undefined ? '^[.!;]' : process.env.HANDLERS,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     MAHN: '94769370897,0' , //dont change thise , if you change this some plugins created by me might not work for others or might have error ( bcoz this is a api key ) kavishka sandaruwan
+    
+    
+        //sites (dont edit )
+    
+    SPDFAPI: process.env.SPDFAPI === undefined ?'EHbew2GJGOzI5qCldC5Oiu7yVgcVuH39VvmOQGPNQE7Ap7EHKyaqA9ziEn1SRSj5' : process.env.SPDFAPI,
+    SITE: process.env.SITE === undefined ?'netfiletolink.herokuapp.com/' : process.env.SITE,
+    FBS1: process.env.FBS1 === undefined ?'https://api.dapuhy.ga/api/' : process.env.FBS1,
+    FBS2: process.env.FBS2 === undefined ?'snapsave?url' : process.env.FBS2,
+    VID1: process.env.VID1 === undefined ?'https://zenzapi.xyz/api/downloader/' : process.env.VID1,
+    VID2: process.env.VID2 === undefined ?'RDMMiI1VlXspMp8&index=2' : process.env.VID2,
+    ASITE: process.env.ASITE === undefined ?'https://netfiletolink.herokuapp.com/' : process.env.ASITE,
+    BAPIS: process.env.BAPIS === undefined ?'https://bx-hunter.herokuapp.com/api/' : process.env.BAPIS,
+    JAPIS: process.env.JAPIS === undefined ?'https://docs-jojo.herokuapp.com/api/' : process.env.JAPIS,
+    HSITE: process.env.HSITE === undefined ?'hunter' : process.env.HSITE,
+    RSITE: process.env.RSITE === undefined ?'https://rei-api.herokuapp.com/api/dl/' : process.env.RSITE,
+    BAPIME: "EuKWDaeyG8qH8Fd",
+    //end 
+    
+    
     BRANCH: 'master',
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
