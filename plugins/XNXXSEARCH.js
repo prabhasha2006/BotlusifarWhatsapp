@@ -46,7 +46,7 @@ Ramiya.addCommand({ pattern: 'getxnx ?(.*)', fromMe: tp1 , dontAddCommandList:tr
 ◄━━━━━━⦁⦁◯⦁⦁━━━━━━►`
 			
       Lusifar_result = await fetchJson(`${url}`)
-                      Lusifarresult = Lusifar_result.result
+                      Lusifar_result = Lusifar_result.result
                       content = ""
                       for (var x of Lusifar_result) {
                           content += `🪀 *Title* : ${x.title}\n`
