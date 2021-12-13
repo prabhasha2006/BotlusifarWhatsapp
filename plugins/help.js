@@ -1,9 +1,10 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy 
-Instagram: www.instagram.com/kyrie.baran
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
 
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const {MessageType, MessageOptions} = require('@adiwajshing/baileys');
 const Config = require('../config');
 
@@ -28,7 +29,7 @@ const sudoEN = "SUDO, Shares your bot to the user you choose with all its powers
 
 if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
     
-    MyPnky.addCommand({pattern: 'help ?(.*)', fromMe: true, desc: h_Des}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'help ?(.*)', fromMe: true, desc: h_Des}, (async (message, match) => {
 
         if (match[1] === '') {
             return await message.client.sendMessage(
@@ -76,7 +77,7 @@ if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
 }
 else {
     
-    MyPnky.addCommand({pattern: 'help ?(.*)', fromMe: true, desc: h_DedEN}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'help ?(.*)', fromMe: true, desc: h_DedEN}, (async (message, match) => {
 
         if (match[1] === '') {
             return await message.client.sendMessage(

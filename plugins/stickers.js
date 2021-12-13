@@ -1,4 +1,10 @@
-const MyPnky = require('../events');
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
+*/
+
+const lusifar = require('../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -10,7 +16,7 @@ const Language = require('../language');
 const Lang = Language.getString('sticker');
 
 if (Config.WORKTYPE == 'private') {
-    MyPnky.addCommand({pattern: 'sticker$', fromMe: true, desc: Lang.STICKER_DESC}, (async (message, match) => {    
+    lusifar.addCommand({pattern: 'sticker$', fromMe: true, desc: Lang.STICKER_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var downloading = await message.client.sendMessage(message.jid,Lang.DOWNLOADING,MessageType.text);
@@ -46,7 +52,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    MyPnky.addCommand({pattern: 'sticker$', fromMe: false, desc: Lang.STICKER_DESC}, (async (message, match) => {    
+    lusifar.addCommand({pattern: 'sticker$', fromMe: false, desc: Lang.STICKER_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var downloading = await message.client.sendMessage(message.jid,Lang.DOWNLOADING,MessageType.text);

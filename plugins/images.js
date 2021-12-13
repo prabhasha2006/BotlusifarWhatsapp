@@ -1,7 +1,10 @@
-/*re edited by afnanplk
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
 
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
@@ -11,7 +14,7 @@ const Lang = Language.getString('wallpaper');
 
 if (Config.WORKTYPE == 'private') {
 
-    MyPnky.addCommand({pattern: 'anime', fromMe: true, desc: 'random anime image'}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'anime', fromMe: true, desc: 'random anime image'}, (async (message, match) => {
 
     var r_text = new Array ();
 
@@ -103,7 +106,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    MyPnky.addCommand({pattern: 'wallpaper', fromMe: true, desc: Lang.WP}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'wallpaper', fromMe: true, desc: Lang.WP}, (async (message, match) => {
 
         var r_text = new Array ();
 
@@ -736,7 +739,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    MyPnky.addCommand({pattern: 'pink', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'pink', fromMe: true,dontAddCommandList: true}, (async (message, match) => {
         
     var r_text = new Array ();    
 r_text[0] = "\nEda eda, mandankonappi.. Nee enne kooduthal mandan aakkatheda\n";
@@ -779,7 +782,7 @@ await message.sendMessage(r_text[i]);
 }
 else if (Config.WORKTYPE == 'public') {
 
-    MyPnky.addCommand({pattern: 'anime', fromMe: false, desc:'random anime image '}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'anime', fromMe: false, desc:'random anime image '}, (async (message, match) => {
 
     var r_text = new Array ();
 
@@ -871,7 +874,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-    MyPnky.addCommand({pattern: 'wallpaper', fromMe: false, desc: Lang.WP}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'wallpaper', fromMe: false, desc: Lang.WP}, (async (message, match) => {
 
         var r_text = new Array ();
 
@@ -1504,7 +1507,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-    MyPnky.addCommand({pattern: 'pink', fromMe: false,dontAddCommandList: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'pink', fromMe: false,dontAddCommandList: true}, (async (message, match) => {
         
     var r_text = new Array ();    
 r_text[0] = "\nEda eda, mandankonappi.. Nee enne kooduthal mandan aakkatheda\n";

@@ -1,3 +1,9 @@
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
+*/
+
 
 const Neotro = require('../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');

@@ -1,13 +1,10 @@
-/* Copyright (C) 2020 Yusuf Usta.
-
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
-WhatsAsena - Yusuf Usta
-Thanks to github/@justinthoms for base and helps.
+kaviyaah - kavishka sandaruwan
 */
 
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
 const tesseract = require("node-tesseract-ocr")
@@ -17,7 +14,7 @@ const Lang = Language.getString('ocr');
 
 if (Config.WORKTYPE == 'private') {
 
-    MyPnky.addCommand({pattern: 'ocr ?(.*)', fromMe: true, desc: Lang.OCR_DESC}, (async (message, match) => { 
+    lusifar.addCommand({pattern: 'ocr ?(.*)', fromMe: true, desc: Lang.OCR_DESC}, (async (message, match) => { 
 
         if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);    
 	var info = await message.reply(Lang.DOWNLOADING);
@@ -54,7 +51,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    MyPnky.addCommand({pattern: 'ocr ?(.*)', fromMe: false, desc: Lang.OCR_DESC}, (async (message, match) => { 
+    lusifar.addCommand({pattern: 'ocr ?(.*)', fromMe: false, desc: Lang.OCR_DESC}, (async (message, match) => { 
 
         if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);    
 	var info = await message.reply(Lang.DOWNLOADING);

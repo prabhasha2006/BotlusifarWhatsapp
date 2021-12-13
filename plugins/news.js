@@ -1,17 +1,17 @@
-/* Copyright (C) 2021 Vai838.
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-WhatsAsenaDuplicated
+kaviyaah - kavishka sandaruwan
 */
 
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
 
 const Language = require('../language');
 const Lang = Language.getString('weather');
 
-MyPnky.addCommand({pattern: 'news ?(.*)', fromMe: false, desc: Lang.NEWS_DESC}, async (message, match) => {
+lusifar.addCommand({pattern: 'news ?(.*)', fromMe: false, desc: Lang.NEWS_DESC}, async (message, match) => {
 	if (match[1] === '') return await message.reply(Lang.NEED_CATEGORY);
 	const url = `https://inshortsapi.vercel.app/news?category=${match[1]}`;
 	try {

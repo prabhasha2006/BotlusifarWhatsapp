@@ -1,9 +1,10 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy
-Instagram: www.instagram.com/kyrie.baran
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
 
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const { MessageType, MessageOptions, Mimetype } = require('@adiwajshing/baileys');
 const fs = require('fs');
 const axios = require('axios');
@@ -14,7 +15,7 @@ const Lang = Language.getString('ttp');
 
 if (Config.WORKTYPE == 'private') {
 
-    MyPnky.addCommand({ pattern: 'animesay ?(.*)', fromMe: true, desc: Lang.ANIME_DESC }, (async (message, match) => {
+    lusifar.addCommand({ pattern: 'animesay ?(.*)', fromMe: true, desc: Lang.ANIME_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -24,7 +25,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    MyPnky.addCommand({ pattern: 'changesay ?(.*)', fromMe: true, desc: Lang.CHANGE_DESC }, (async (message, match) => {
+    lusifar.addCommand({ pattern: 'changesay ?(.*)', fromMe: true, desc: Lang.CHANGE_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -34,7 +35,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    MyPnky.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: true, desc: Lang.TRUMP_DESC }, (async (message, match) => {
+    lusifar.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: true, desc: Lang.TRUMP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -46,7 +47,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    MyPnky.addCommand({ pattern: 'animesay ?(.*)', fromMe: false, desc: Lang.ANIME_DESC }, (async (message, match) => {
+    lusifar.addCommand({ pattern: 'animesay ?(.*)', fromMe: false, desc: Lang.ANIME_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -56,7 +57,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    MyPnky.addCommand({ pattern: 'changesay ?(.*)', fromMe: false, desc: Lang.CHANGE_DESC }, (async (message, match) => {
+    lusifar.addCommand({ pattern: 'changesay ?(.*)', fromMe: false, desc: Lang.CHANGE_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -66,7 +67,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
 
-    MyPnky.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: false, desc: Lang.TRUMP_DESC }, (async (message, match) => {
+    lusifar.addCommand({ pattern: 'trumpsay ?(.*)', fromMe: false, desc: Lang.TRUMP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 

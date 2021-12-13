@@ -1,7 +1,9 @@
-/* Codded by @PLK
-HEHE
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const { requestLyricsFor, requestAuthorFor, requestTitleFor, requestIconFor } = require("solenolyrics");
@@ -24,7 +26,7 @@ const nobs = "no"
 
 if (cn.WORKTYPE == 'private') {
 
-    MyPnky.addCommand({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
+    lusifar.addCommand({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
 
         const userName = match[1]
 
@@ -51,7 +53,7 @@ if (cn.WORKTYPE == 'private') {
 
 else if (cn.WORKTYPE == 'public') {
 
-    MyPnky.addCommand({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
+    lusifar.addCommand({ pattern: 'pinsta ?(.*)', fromMe: false, desc: 'instagram profile' }, async (message, match) => {
 
         const userName = match[1]
 

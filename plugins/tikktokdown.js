@@ -1,7 +1,9 @@
-/*
-Powerd by kaviyaah - lusifar
-ussana eka maka bawiyam tahukanna
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
+
 const lusifar = require('../events');
 const {MessageType,mimetype,Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');

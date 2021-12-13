@@ -1,4 +1,10 @@
-const Asena = require('../events');
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
+*/
+
+const lusifar = require('../events');
 const Config = require('../config');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
@@ -7,7 +13,7 @@ const Language = require('../language');
 const Lang = Language.getString('scrapers');
 
 
-Asena.addCommand({pattern: 'btsabout', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'btsabout', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
 
     var r_text = new Array ();
     

@@ -1,11 +1,10 @@
-//උස්සපම් වැඩ නෑ 
-
-/* Copyright (C) 2021 RAMIYA-ALEXA TEAM.
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-ALEXA TEAM - RAMIYA
+kaviyaah - kavishka sandaruwan
 */
-// අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
+//don't working
+//මාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
 
 const Neotro = require('../events');
 const {MessageType,mimetype,Mimetype} = require('@adiwajshing/baileys');

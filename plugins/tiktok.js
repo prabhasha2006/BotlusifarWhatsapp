@@ -1,5 +1,10 @@
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
+*/
 
-const Asena = require('../events');
+const lusifar = require('../events');
 const {MessageType,mimetype,Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
@@ -9,7 +14,7 @@ const capt = " *this is your tik tok video*"
 
 if (Config.WORKTYPE == 'public') {
 	
-Asena.addCommand({ pattern: 'ttv ?(.*)', fromMe: false }, async (message, match) => {
+lusifar.addCommand({ pattern: 'ttv ?(.*)', fromMe: false }, async (message, match) => {
 
     const link = match[1]
 
@@ -38,7 +43,7 @@ Asena.addCommand({ pattern: 'ttv ?(.*)', fromMe: false }, async (message, match)
 					
 }) //pattern close
   
-  Asena.addCommand({ pattern: 'ttv ?(.*)', fromMe: true }, async (message, match) => {
+  lusifar.addCommand({ pattern: 'ttv ?(.*)', fromMe: true }, async (message, match) => {
 
     const link = match[1]
 
@@ -71,7 +76,7 @@ Asena.addCommand({ pattern: 'ttv ?(.*)', fromMe: false }, async (message, match)
 
 else if (Config.WORKTYPE == 'private') {
   
-  Asena.addCommand({ pattern: 'ttv ?(.*)', fromMe: true }, async (message, match) => {
+  lusifar.addCommand({ pattern: 'ttv ?(.*)', fromMe: true }, async (message, match) => {
 
     const link = match[1]
 

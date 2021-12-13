@@ -1,10 +1,8 @@
-
-/* Copyright (C) 2021 LUSIFAR-KAVISHKA
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-LUSIFAR - KAVISHKA
+kaviyaah - kavishka sandaruwan
 */
-
 const lusifar = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');

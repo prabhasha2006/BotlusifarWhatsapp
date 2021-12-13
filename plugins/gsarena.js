@@ -1,7 +1,10 @@
-/* created by afnanplk
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
 
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const { MessageType } = require('@adiwajshing/baileys');
 const got = require('got');
 const Config = require('../config');
@@ -13,7 +16,7 @@ const Lang = Language.getString('weather');
 
 if (Config.WORKTYPE == 'private') {
 	
-MyPnky.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: Lang.DEVICE , dontAddCommandList: true }, async (message, match) => {
+lusifar.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: Lang.DEVICE , dontAddCommandList: true }, async (message, match) => {
 	const url = `https://docs-jojo.herokuapp.com/api/gsm_arena?q=${match[1]}`;
 	try {
 		const response = await got(url);
@@ -29,7 +32,7 @@ MyPnky.addCommand({pattern: 'device ?(.*)', fromMe: true, desc: Lang.DEVICE , do
 
 else if (Config.WORKTYPE == 'public') {
 	
-MyPnky.addCommand({pattern: 'device ?(.*)', fromMe: false, desc: Lang.DEVICE , dontAddCommandList: true }, async (message, match) => {
+lusifar.addCommand({pattern: 'device ?(.*)', fromMe: false, desc: Lang.DEVICE , dontAddCommandList: true }, async (message, match) => {
 	const url = `https://docs-jojo.herokuapp.com/api/gsm_arena?q=${match[1]}`;
 	try {
 		const response = await got(url);

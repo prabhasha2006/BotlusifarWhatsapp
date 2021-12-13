@@ -1,4 +1,10 @@
-const MyPnky = require('../events');
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
+*/
+
+const lusifar = require('../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -18,7 +24,7 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 
-MyPnky.addCommand({pattern: 'killspam', fromMe: true, dontAddCommandList: true, desc: Lang.STOP_SPAMDESC}, (async (message, match) => {
+lusifar.addCommand({pattern: 'killspam', fromMe: true, dontAddCommandList: true, desc: Lang.STOP_SPAMDESC}, (async (message, match) => {
 
     await message.client.sendMessage(message.jid, Lang.STOP_SPAM, MessageType.text);
 
@@ -29,7 +35,7 @@ MyPnky.addCommand({pattern: 'killspam', fromMe: true, dontAddCommandList: true, 
     });
 }));
 
-MyPnky.addCommand({pattern: 'spam ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.SPAM_DESC}, (async (message, match) => {
+lusifar.addCommand({pattern: 'spam ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.SPAM_DESC}, (async (message, match) => {
 
 
     if (match[1] === '') {

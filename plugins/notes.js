@@ -1,16 +1,8 @@
-/*
-# Copyright (C) 2020 MuhammedKpln.
-#
-# WhatsAsena is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# WhatsAsena is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
+
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
@@ -19,13 +11,13 @@
 const fs = require('fs/promises')
 const path = require('path')
 const { MessageType } = require('@adiwajshing/baileys')
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const { successfullMessage, errorMessage, infoMessage } = require('../helpers');
 const NotesDB = require('./sql/notes');
 const Language = require('../language')
 const Lang = Language.getString('notes')
 
-MyPnky.addCommand({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, async (message, match) => {
+lusifar.addCommand({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, async (message, match) => {
 
 
     const _notes = await NotesDB.getNotes()
@@ -54,7 +46,7 @@ MyPnky.addCommand({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, as
 
 
 
-MyPnky.addCommand({ pattern: 'save ?(.*)', fromMe: true, desc: Lang.SAVE_USAGE }, async (message, match) => {
+lusifar.addCommand({ pattern: 'save ?(.*)', fromMe: true, desc: Lang.SAVE_USAGE }, async (message, match) => {
 
     const userNote = match[1]
 
@@ -102,7 +94,7 @@ MyPnky.addCommand({ pattern: 'save ?(.*)', fromMe: true, desc: Lang.SAVE_USAGE }
     }
 })
 
-MyPnky.addCommand({ pattern: 'deleteNotes', fromMe: true, desc: Lang.DELETE_USAGE }, async (message, match) => {
+lusifar.addCommand({ pattern: 'deleteNotes', fromMe: true, desc: Lang.DELETE_USAGE }, async (message, match) => {
 
     await NotesDB.deleteAllNotes()
 

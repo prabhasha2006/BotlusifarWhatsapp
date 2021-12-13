@@ -1,8 +1,9 @@
-/* Codded by @phaticusthiccy
-re edited by afnanplk
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
-
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
@@ -14,7 +15,7 @@ const Lang = Language.getString('log');
 
 if (Config.WORKTYPE == 'private') {
 
-    MyPnky.addCommand({pattern: 'carbon$', fromMe: true, desc: Lang.CARBON_DESC}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'carbon$', fromMe: true, desc: Lang.CARBON_DESC}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.REPLY, MessageType.text);
 
@@ -81,7 +82,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    MyPnky.addCommand({pattern: 'carbon$', fromMe: false, desc: Lang.CARBON_DESC}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'carbon$', fromMe: false, desc: Lang.CARBON_DESC}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.REPLY, MessageType.text);
 

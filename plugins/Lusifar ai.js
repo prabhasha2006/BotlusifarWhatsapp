@@ -1,13 +1,10 @@
-/* Codded by Phaticusthiccy
-eva artificial intelligence was codded by Phaticusthiccy
-also 90% of thise code is done by Phaticusthiccy
-
-re-coded or modified by afnanplk
-to bring new ai
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
 
-
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs');
 const https = require('https');
@@ -65,7 +62,7 @@ const convertToWav = file => {
         .save('output.wav')
 }
 
-MyPnky.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
+lusifar.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
     if (message.message.startsWith('pinky') && conf.TALKING_PINKY !== 'true') {        
         var unique_ident = message.client.user.jid.split('@')[0]      
         let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
@@ -94,7 +91,7 @@ MyPnky.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComma
         })
     }
 }));
-MyPnky.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
         if (conf.TALKING_PINKY == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
             (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
             if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
@@ -183,7 +180,7 @@ MyPnky.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
         }
 
 }));
-MyPnky.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc,dontAddCommandList: true, fromMe: wk }, (async (message, match) => {
+lusifar.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc,dontAddCommandList: true, fromMe: wk }, (async (message, match) => {
     if (!message.reply_message) return await message.client.sendMessage(message.jid,reply_eva, MessageType.text, { quoted: message.data }) 
     try {
         const file = await message.client.downloadAndSaveMediaMessage({
@@ -267,7 +264,7 @@ if (conf.LANG == 'ML') {
     succ_off = 'സെമി-ഫങ്ഷണൽ ആയി pinky സജ്ജമാക്കുക! കുറച്ച് കാത്തിരിക്കൂ! ☑️'
 }
 
-MyPnky.addCommand({ pattern: 'talklusifar ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.pinky on / off' }, (async (message, match) => {
+lusifar.addCommand({ pattern: 'talklusifar ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.pinky on / off' }, (async (message, match) => {
     var pinky_status = `${conf.TALKING_PINKY}`
     if (match[1] == 'on') {
         if (pinky_status == 'true') {

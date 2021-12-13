@@ -1,4 +1,10 @@
-const MyPnky = require('../events');
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
+*/
+
+const lusifar = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
 const axios = require('axios');
@@ -9,7 +15,7 @@ const Lang = Language.getString('weather');
 
 if (config.WORKTYPE == 'private') {
 
-    MyPnky.addCommand({pattern: 'sweather ?(.*)', fromMe: true, desc: "Gives you the weekly interpretations of space weather observations provided by the Space Weather Research Center (SWRC) for a p."}, async (message, match) => {
+    lusifar.addCommand({pattern: 'sweather ?(.*)', fromMe: true, desc: "Gives you the weekly interpretations of space weather observations provided by the Space Weather Research Center (SWRC) for a p."}, async (message, match) => {
 	  if (match[1] === 'where is it?') return await message.reply("wait...");
 	  const url = `https://api.nasa.gov/DONKI/notifications?type=all&api_key=ccdRSkRerDoJHn2g36DGnJgyctfkGDml3ZzMWWxL`;
 	  try {
@@ -31,7 +37,7 @@ if (config.WORKTYPE == 'private') {
 	  }
   });
 	
-    MyPnky.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: true}, async (message, match) => {
+    lusifar.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: true}, async (message, match) => {
 
 	    if (match[1] === '') return await message.reply(Lang.NEED_LOCATION);
 	    const url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;
@@ -49,7 +55,7 @@ if (config.WORKTYPE == 'private') {
 	    }
     });
 
-    MyPnky.addCommand({pattern: 'compliment ?(.*)', fromMe: true, desc: Lang.CM_DESC}, async (message, match) => {
+    lusifar.addCommand({pattern: 'compliment ?(.*)', fromMe: true, desc: Lang.CM_DESC}, async (message, match) => {
 	  if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	  const url = `https://complimentr.com/api`;
 	  try {
@@ -61,7 +67,7 @@ if (config.WORKTYPE == 'private') {
 	  }
   });
 
-    MyPnky.addCommand({pattern: 'happymod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC, dontAddCommandList: true }, async (message, match) => {
+    lusifar.addCommand({pattern: 'happymod ?(.*)', fromMe: true, desc: Lang.HMODD_DESC, dontAddCommandList: true }, async (message, match) => {
 	  if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
 	  const url = `https://api.zeks.xyz/api/happymod?apikey=&q=${match[1]}&apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs`;
 	  try {
@@ -76,7 +82,7 @@ if (config.WORKTYPE == 'private') {
 	  }
   });
 
-    MyPnky.addCommand({pattern: 'insult ?(.*)', fromMe: true, desc: Lang.EVINS_DESC}, async (message, match) => {
+    lusifar.addCommand({pattern: 'insult ?(.*)', fromMe: true, desc: Lang.EVINS_DESC}, async (message, match) => {
 	  if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	  const url = `https://evilinsult.com/generate_insult.php?lang=en&type=json`;
 	  try {
@@ -88,7 +94,7 @@ if (config.WORKTYPE == 'private') {
 	  }
   });
 
-    MyPnky.addCommand({ pattern: 'movie ?(.*)', fromMe: true, desc: "Shows movie info." }, (async (message, match) => {
+    lusifar.addCommand({ pattern: 'movie ?(.*)', fromMe: true, desc: "Shows movie info." }, (async (message, match) => {
 	  if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
 	  let url = `http://www.omdbapi.com/?apikey=742b2d09&t=${match[1]}&plot=full`
 	  const response = await got(url);
@@ -115,7 +121,7 @@ if (config.WORKTYPE == 'private') {
 	  await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
   }));
 
-    MyPnky.addCommand({pattern: 'joke ?(.*)', fromMe: false, desc: Lang.JOKE_DESC}, async (message, match) => {
+    lusifar.addCommand({pattern: 'joke ?(.*)', fromMe: false, desc: Lang.JOKE_DESC}, async (message, match) => {
 	  if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	  const url = `https://official-joke-api.appspot.com/random_joke`;
 	  try {
@@ -128,7 +134,7 @@ if (config.WORKTYPE == 'private') {
 	  }
   });
 
-    MyPnky.addCommand({pattern: 'bot ?(.*)', fromMe: true, desc: Lang.BOT_DESC}, async (message, match) => {
+    lusifar.addCommand({pattern: 'bot ?(.*)', fromMe: true, desc: Lang.BOT_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	const url = `https://api.simsimi.net/v2/?text=${match[1]}&lc=en&cf=true`;
 	try {
@@ -140,7 +146,7 @@ if (config.WORKTYPE == 'private') {
 	}
     });
 
-    MyPnky.addCommand({pattern: 'owner', fromMe: true, desc: 'shows the detail of bot owner'}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'owner', fromMe: true, desc: 'shows the detail of bot owner'}, (async (message, match) => {
 
         if (message.jid === '15369524516-1612300121@g.us') {
 
@@ -155,7 +161,7 @@ if (config.WORKTYPE == 'private') {
         }
     }));
 
-    MyPnky.addCommand({pattern: 'quote ?(.*)', fromMe: true, desc: Lang.QUOTE_DESC}, async (message, match) => {
+    lusifar.addCommand({pattern: 'quote ?(.*)', fromMe: true, desc: Lang.QUOTE_DESC}, async (message, match) => {
 	  if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	  const url = `https://api.quotable.io/random`;
 	  try {
@@ -171,7 +177,7 @@ if (config.WORKTYPE == 'private') {
 }
 else if (config.WORKTYPE == 'public') {
 
-    MyPnky.addCommand({pattern: 'sweather ?(.*)', fromMe: false, desc: "Gives you the weekly interpretations of space weather observations provided by the Space Weather Research Center (SWRC) for a p."}, async (message, match) => {
+    lusifar.addCommand({pattern: 'sweather ?(.*)', fromMe: false, desc: "Gives you the weekly interpretations of space weather observations provided by the Space Weather Research Center (SWRC) for a p."}, async (message, match) => {
 	  if (match[1] === 'where is it?') return await message.reply("wait...");
 	  const url = `https://api.nasa.gov/DONKI/notifications?type=all&api_key=ccdRSkRerDoJHn2g36DGnJgyctfkGDml3ZzMWWxL`;
 	  try {
@@ -193,7 +199,7 @@ else if (config.WORKTYPE == 'public') {
 	  }
   });
 	
-   MyPnky.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: false}, async (message, match) => {
+   lusifar.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: false}, async (message, match) => {
 
 	    if (match[1] === '') return await message.reply(Lang.NEED_LOCATION);
 	    const url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;
@@ -211,7 +217,7 @@ else if (config.WORKTYPE == 'public') {
 	    }
     });
 
-    MyPnky.addCommand({pattern: 'compliment ?(.*)', fromMe: false, desc: Lang.CM_DESC}, async (message, match) => {
+    lusifar.addCommand({pattern: 'compliment ?(.*)', fromMe: false, desc: Lang.CM_DESC}, async (message, match) => {
 	  if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	  const url = `https://complimentr.com/api`;
 	  try {
@@ -223,7 +229,7 @@ else if (config.WORKTYPE == 'public') {
 	  }
   });
 
-    MyPnky.addCommand({pattern: 'happymod ?(.*)', fromMe: false, desc: Lang.HMODD_DESC, dontAddCommandList: true }, async (message, match) => {
+    lusifar.addCommand({pattern: 'happymod ?(.*)', fromMe: false, desc: Lang.HMODD_DESC, dontAddCommandList: true }, async (message, match) => {
 	  if (match[1] === '') return await message.reply(Lang.NEED_APPNAME);
 	  const url = `https://api.zeks.xyz/api/happymod?apikey=&q=${match[1]}&apikey=1hroZ3ju94h0PBjCNKsfhYaSuLs`;
 	  try {
@@ -238,7 +244,7 @@ else if (config.WORKTYPE == 'public') {
 	  }
   });
 
-    MyPnky.addCommand({pattern: 'insult ?(.*)', fromMe: false, desc: Lang.EVINS_DESC}, async (message, match) => {
+    lusifar.addCommand({pattern: 'insult ?(.*)', fromMe: false, desc: Lang.EVINS_DESC}, async (message, match) => {
 	  if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	  const url = `https://evilinsult.com/generate_insult.php?lang=en&type=json`;
 	  try {
@@ -250,7 +256,7 @@ else if (config.WORKTYPE == 'public') {
 	  }
   });
 
-    MyPnky.addCommand({ pattern: 'movie ?(.*)', fromMe: false, desc: "Shows movie info." }, (async (message, match) => {
+    lusifar.addCommand({ pattern: 'movie ?(.*)', fromMe: false, desc: "Shows movie info." }, (async (message, match) => {
 	  if (match[1] === '') return await message.client.sendMessage(message.jid, '```Give me a name.```', MessageType.text, { quoted: message.data });
 	  let url = `http://www.omdbapi.com/?apikey=742b2d09&t=${match[1]}&plot=full`
 	  const response = await got(url);
@@ -277,7 +283,7 @@ else if (config.WORKTYPE == 'public') {
 	  await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
   }));
 
-    MyPnky.addCommand({pattern: 'joke ?(.*)', fromMe: false, desc: Lang.JOKE_DESC}, async (message, match) => {
+    lusifar.addCommand({pattern: 'joke ?(.*)', fromMe: false, desc: Lang.JOKE_DESC}, async (message, match) => {
 	  if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	  const url = `https://official-joke-api.appspot.com/random_joke`;
 	  try {
@@ -290,7 +296,7 @@ else if (config.WORKTYPE == 'public') {
 	  }
   });
 
-    MyPnky.addCommand({pattern: 'bot ?(.*)', fromMe: false, desc: Lang.BOT_DESC}, async (message, match) => {
+    lusifar.addCommand({pattern: 'bot ?(.*)', fromMe: false, desc: Lang.BOT_DESC}, async (message, match) => {
 	if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	const url = `https://api.simsimi.net/v2/?text=${match[1]}&lc=en&cf=true`;
 	try {
@@ -302,7 +308,7 @@ else if (config.WORKTYPE == 'public') {
 	}
     });
 
-    MyPnky.addCommand({pattern: 'owner', fromMe: false, desc: 'shows the detail of bot owner'}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'owner', fromMe: false, desc: 'shows the detail of bot owner'}, (async (message, match) => {
 
         if (message.jid === '15369524516-1612300121@g.us') {
 
@@ -317,7 +323,7 @@ else if (config.WORKTYPE == 'public') {
         }
     }));
 
-    MyPnky.addCommand({pattern: 'quote ?(.*)', fromMe: false, desc: Lang.QUOTE_DESC}, async (message, match) => {
+    lusifar.addCommand({pattern: 'quote ?(.*)', fromMe: false, desc: Lang.QUOTE_DESC}, async (message, match) => {
 	  if (match[1] === 'xx') return await message.reply(Lang.NEED_LOCATIONA);
 	  const url = `https://api.quotable.io/random`;
 	  try {

@@ -1,9 +1,10 @@
-/* Copyright (C) 2020 Yusuf Usta.
-recodded by afnanplk
-new work type by afnanplk
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
 
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 
@@ -21,7 +22,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 
-MyPnky.addCommand({pattern: 'tagall ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
+lusifar.addCommand({pattern: 'tagall ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
         
     if (!message.reply_message) {
         if (match[1] !== '') {
@@ -82,7 +83,7 @@ else if (Config.WORKTYPE == 'public') {
     
   
     
-    MyPnky.addCommand({pattern: 'tagall ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
+    lusifar.addCommand({pattern: 'tagall ?(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
         
         if (!message.reply_message) {
             if (match[1] !== '') {
@@ -158,7 +159,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
     
-    MyPnky.addCommand({pattern: 'tag ?(.*)', fromMe: false, dontAddCommandList: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
+    lusifar.addCommand({pattern: 'tag ?(.*)', fromMe: false, dontAddCommandList: true, desc: Lang.TAGALL_DESC }, (async (message, match) => {
          var us = await checkUsAdmin(message);
          if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
 
@@ -204,7 +205,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     }
 }));
     
-     MyPnky.addCommand({pattern: 'report ?(.*)', fromMe: false, desc: 'to report someone'}, (async (message, match) => {
+     lusifar.addCommand({pattern: 'report ?(.*)', fromMe: false, desc: 'to report someone'}, (async (message, match) => {
         if (match[1] == '') {
             let grup = await message.client.groupMetadata(message.jid);
             var jids = [];

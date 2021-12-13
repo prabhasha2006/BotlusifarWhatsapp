@@ -1,5 +1,10 @@
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
+*/
 
-const Asena = require('../events');
+const lusifar = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const {spawnSync} = require('child_process');
 const Config = require('../config');
@@ -13,14 +18,14 @@ const Lang = Language.getString('system_stats');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
         
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
         await axios.get(pp, {responseType: 'arraybuffer'}).then(async (res) => { await message.client.sendMessage(message.jid, res.data, MessageType.image,{contextInfo: { forwardingScore: 2, isForwarded: false },caption: Config.ALIVEMSG  + '\n\n*Powered By Lusifar*'}); });
     }));
 
-    Asena.addCommand({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC}, (async (message, match) => {
 
         const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         await message.sendMessage(
@@ -30,7 +35,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-   Asena.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
+   lusifar.addCommand({pattern: 'alive', fromMe: false, desc: Lang.ALIVE_DESC}, (async (message, match) => {
         
         let pp
         try { pp = await message.client.getProfilePicture(message.jid.includes('-') ? message.data.participant : message.jid ); } catch { pp = await message.client.getProfilePicture(); }
@@ -38,7 +43,7 @@ else if (Config.WORKTYPE == 'public') {
       });
     }));
 
-    Asena.addCommand({pattern: 'sysd', fromMe: false, desc: Lang.SYSD_DESC}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'sysd', fromMe: false, desc: Lang.SYSD_DESC}, (async (message, match) => {
 
         const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         await message.sendMessage(
@@ -46,7 +51,7 @@ else if (Config.WORKTYPE == 'public') {
         );
     }));
     
-    Asena.addCommand({pattern: 'psysd', fromMe: true, desc: Lang.SYSD_DESC, dontAddCommandList: true }, (async (message, match) => {
+    lusifar.addCommand({pattern: 'psysd', fromMe: true, desc: Lang.SYSD_DESC, dontAddCommandList: true }, (async (message, match) => {
 
         const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
         await message.sendMessage(

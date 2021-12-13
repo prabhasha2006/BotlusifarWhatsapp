@@ -1,7 +1,10 @@
-/* 
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
 
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const config = require('../config');
 const Heroku = require('heroku-client');
 const heroku = new Heroku({
@@ -29,7 +32,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         BGM_on = 'bgm option turned on!'
         BGM_off = 'bgm option turned off'
     }
-    MyPnky.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: l_dsc, usage: '.bgm on / off' }, (async (message, match) => {
+    lusifar.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: l_dsc, usage: '.bgm on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -72,7 +75,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         THERI_offp = 'ᴜꜱᴇʀꜱ ᴡɪʟʟ ɴᴏᴛ ʙᴇ ʙʟᴏᴄᴋᴇᴅ ɪꜰ ɢɪᴠᴇɴ ʙᴀᴅ ᴡᴏʀᴅꜱ ᴀʀᴇ ᴜꜱᴇᴅ'
     }
    
-    MyPnky.addCommand({pattern: 'theri ?(.*)', fromMe: true, desc: l_dss, usage: 'for pm .theri pm no / pm yes \n for group .theri gp no / gp yes' }, (async (message, match) => {
+    lusifar.addCommand({pattern: 'theri ?(.*)', fromMe: true, desc: l_dss, usage: 'for pm .theri pm no / pm yes \n for group .theri gp no / gp yes' }, (async (message, match) => {
         if (match[1] == 'pm yes') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -121,7 +124,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     }
 
 
- MyPnky.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: plk_desc, usage: '.bgm one / two' }, (async (message, match) => {
+ lusifar.addCommand({pattern: 'bgm ?(.*)', fromMe: true, desc: plk_desc, usage: '.bgm one / two' }, (async (message, match) => {
         if (match[1] == 'two') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -207,7 +210,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         succ_on = 'Antilink Berhasil Dibuka!'
         succ_off = 'Antilink Berhasil Ditutup!'
     }
-    MyPnky.addCommand({pattern: 'antilink ?(.*)', fromMe: true, desc: l_dsc, usage: '.antilink on / off' }, (async (message, match) => {
+    lusifar.addCommand({pattern: 'antilink ?(.*)', fromMe: true, desc: l_dsc, usage: '.antilink on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -247,7 +250,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         LINKT_off = '*M_LINK අක්‍රීයයි*'
     }
    
-    MyPnky.addCommand({pattern: 'mlink ?(.*)', fromMe: true, desc: l_dsc, usage: '.mlink on / of' }, (async (message, match) => {
+    lusifar.addCommand({pattern: 'mlink ?(.*)', fromMe: true, desc: l_dsc, usage: '.mlink on / of' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 
@@ -285,7 +288,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
         W_PRI = 'private ලෙස ක්‍රියා කරයි'
     }
 
-    MyPnky.addCommand({pattern: 'work ?(.*)', fromMe: true,dontAddCommandList: true, }, (async (message, match) => {
+    lusifar.addCommand({pattern: 'work ?(.*)', fromMe: true,dontAddCommandList: true, }, (async (message, match) => {
         if (match[1] == 'public') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 

@@ -1,4 +1,10 @@
-const Asena = require('../events');
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
+*/
+
+const lusifar = require('../events');
 const config = require('../config');
 const Heroku = require('heroku-client');
 const heroku = new Heroku({
@@ -32,7 +38,7 @@ let baseURI = '/apps/' + config.HEROKU.APP_NAME;
     }
 
    
-    Asena.addCommand({pattern: 'antibadword ?(.*)', fromMe: true, desc: l_dsc, usage: '.antibadword on / off' }, (async (message, match) => {
+    lusifar.addCommand({pattern: 'antibadword ?(.*)', fromMe: true, desc: l_dsc, usage: '.antibadword on / off' }, (async (message, match) => {
         if (match[1] == 'off') {
                 await heroku.patch(baseURI + '/config-vars', { 
                     body: { 

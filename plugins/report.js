@@ -1,9 +1,9 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy
-Instagram: www.instagram.com/kyrie.baran
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
-
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 
@@ -11,7 +11,7 @@ const Language = require('../language');
 const Lang = Language.getString('tagall');
 
 if (Config.WORKTYPE == 'private') {
-    MyPnky.addCommand({pattern: 'report ?(.*)', fromMe: true, desc: Lang.REPORT}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'report ?(.*)', fromMe: true, desc: Lang.REPORT}, (async (message, match) => {
         if (match[1] == '' && message.reply_message) {
             let grup = await message.client.groupMetadata(message.jid);
             var jids = [];
@@ -43,7 +43,7 @@ if (Config.WORKTYPE == 'private') {
     }));
 }
 else if (Config.WORKTYPE == 'public') {
-    MyPnky.addCommand({pattern: 'report ?(.*)', fromMe: false, desc: Lang.REPORT}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'report ?(.*)', fromMe: false, desc: Lang.REPORT}, (async (message, match) => {
         if (match[1] == '' && message.reply_message) {
             let grup = await message.client.groupMetadata(message.jid);
             var jids = [];

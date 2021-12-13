@@ -1,8 +1,10 @@
-/* Copyright (C) 2020 Yusuf Usta.
-re codded by kavishka
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
 
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const Heroku = require('heroku-client');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
@@ -29,7 +31,7 @@ var LANG = {
             limit: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Güvenlik Sınırını Aşıyor!*\n*Zararlılık Yüzdesi:* _%' : '*This Plugin Exceeds Security Limit!*\n*Percentage of Harm:* _%',
             imside: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Varolan Pluginleri Tekrar Yükleyemezsin!*' : '*You Cant Reinstall Existing Plugins!*'
 };
-MyPnky.addCommand({pattern: 'pkg ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN, dontAddCommandList: true}, (async (message, match) => {
+lusifar.addCommand({pattern: 'pkg ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN, dontAddCommandList: true}, (async (message, match) => {
 
     if (match[1] == '') return await message.client.sendMessage(message.jid,Lang.NEED_URL + '.install https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd', MessageType.text)
     try {
@@ -127,7 +129,7 @@ MyPnky.addCommand({pattern: 'pkg ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, 
     }
 }));
 
-MyPnky.addCommand({pattern: 'plugin$', fromMe: true, dontAddCommandList: true, desc: Lang.PLUGIN_DESC}, (async (message, match) => {
+lusifar.addCommand({pattern: 'plugin$', fromMe: true, dontAddCommandList: true, desc: Lang.PLUGIN_DESC}, (async (message, match) => {
     var mesaj = Lang.INSTALLED_FROM_REMOTE;
     var plugins = await Db.PluginDB.findAll();
     if (plugins.length < 1) {
@@ -143,7 +145,7 @@ MyPnky.addCommand({pattern: 'plugin$', fromMe: true, dontAddCommandList: true, d
     }
 }));
 
-MyPnky.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
+lusifar.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, dontAddCommandList: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
     if (!match[1].startsWith('__')) match[1] = '__' + match[1];
     try {

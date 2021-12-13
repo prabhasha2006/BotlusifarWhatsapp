@@ -1,10 +1,10 @@
-/* Copyright (C) 2020 Yusuf Usta.
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-WhatsAsena - Yusuf Usta
+kaviyaah - kavishka sandaruwan
 */
 
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const exec = require('child_process').exec;
 const os = require("os");
@@ -55,7 +55,7 @@ if (Config.LANG == 'PT') ldc = '*Link Detectado!*'
 if (Config.LANG == 'RU') ldc = '*Ссылка обнаружена!*'
 if (Config.LANG == 'HI') ldc = '*लिंक का पता चला!*'
 if (Config.LANG == 'ES') ldc = '*Enlace Detectado!*'
-MyPnky.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (antilink_var == 'true' && message.jid !== '905511384572-1616356915@g.us') {
         let regex1 = new RegExp('http://')
         let regex2 = new RegExp('https://chat')
@@ -161,7 +161,7 @@ if (Config.LANG == 'PT') ldc = '*Link Detectado!*'
 if (Config.LANG == 'RU') ldc = '*Ссылка обнаружена!*'
 if (Config.LANG == 'HI') ldc = '*लिंक का पता चला!*'
 if (Config.LANG == 'ES') ldc = '*Enlace Detectado!*'
-MyPnky.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (alllink_var == 'true' && message.jid !== '9082891698-1616356915@g.us') {
         let regex1 = new RegExp('http://')
         let regex2 = new RegExp('https://')
@@ -232,7 +232,7 @@ var plk9 = ''
     }  
 
 
-MyPnky.addCommand({on: 'text', fromMe: false,onlyGroup: true, deleteCommand: false}, (async (message, match) => {
+lusifar.addCommand({on: 'text', fromMe: false,onlyGroup: true, deleteCommand: false}, (async (message, match) => {
    if (AI_var == 'group' && message.jid !== '919562803423-1627735504@g.us') {
     
         let regex1 = new RegExp('command ')
@@ -319,7 +319,7 @@ var plk9 = ''
     }  
 
 
-MyPnky.addCommand({on: 'text', fromMe: false,onlyPm:true , deleteCommand: false}, (async (message, match) => {
+lusifar.addCommand({on: 'text', fromMe: false,onlyPm:true , deleteCommand: false}, (async (message, match) => {
    if (AI_var == 'pm' && message.jid !== '919562803423-1627735504@g.us') {
     
         let regex1 = new RegExp('command ')
@@ -406,7 +406,7 @@ var plk9 = ''
     }  
 
 
-MyPnky.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
    if (AI_var == 'both' && message.jid !== '919562803423-1627735504@g.us') {
     
         let regex1 = new RegExp('command ')

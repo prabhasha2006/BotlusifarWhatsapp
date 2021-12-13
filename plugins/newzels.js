@@ -1,9 +1,9 @@
 
-/* Copyright (C) 2021 kavishka - lusifar
-ane whukapam.amaruwen hadwe awa ussanna
-බටන් බලන්නත ආවෙ 😂 මේකත් උස්සපන් චීත්තයක් නෙ උබ තමා අපෙ එව්වා උස්සන්නෙ
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
-
 const lusifar = require('../events');
 const {
     MessageType,

@@ -1,4 +1,10 @@
-const Asena = require('../events');
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
+*/
+
+const lusifar = require('../events');
 
 const {MessageType} = require('@adiwajshing/baileys');
 
@@ -9,7 +15,7 @@ const FINAL = "THIS IS AN ANTISAPM (anti lag),\nමෙම කේතය ඔබග
 const TMUTE = "Trying to close temporary,\nතාවකාලිකව සමුහය වැසීමට උත්සාහ කිරීම"
 const MUT = ".mute 1d"
 const SCXR = "Running script...."
-Asena.addCommand({pattern: 'antispm', fromMe: true, deleteCommand: true, desc: Ln,}, (async (message, match) => {
+lusifar.addCommand({pattern: 'antispm', fromMe: true, deleteCommand: true, desc: Ln,}, (async (message, match) => {
 
   var msg = await message.reply('Preforming....');
 

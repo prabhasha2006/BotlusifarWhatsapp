@@ -1,3 +1,9 @@
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
+*/
+
 /*උස්සන්න එපා ඉතින් හුත්තො අමාරුවෙන් හැදුවෙ
 
 ඉස්සුවොත් කෙල වෙලාම පලයම්*/

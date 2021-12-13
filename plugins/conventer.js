@@ -1,9 +1,10 @@
-/*Codded by @phaticusthiccy
-recodded by afnan plk
-PINKY V2 
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan
 */
 
-const MyPnky = require('../events');
+const lusifar = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -65,7 +66,7 @@ function webp2mp4File(path) {
 
 if (Config.WORKTYPE == 'private') {
 
-    MyPnky.addCommand({pattern: 'mp3$', fromMe: true, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
+    lusifar.addCommand({pattern: 'mp3$', fromMe: true, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.MP4TOAUDİO,MessageType.text);
@@ -85,7 +86,7 @@ if (Config.WORKTYPE == 'private') {
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    MyPnky.addCommand({pattern: 'photo$', fromMe: true, desc: Lang.STİCKER_DESC}, (async (message, match) => {   
+    lusifar.addCommand({pattern: 'photo$', fromMe: true, desc: Lang.STİCKER_DESC}, (async (message, match) => {   
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.STİCKER_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.STİCKER,MessageType.text);
@@ -105,7 +106,7 @@ if (Config.WORKTYPE == 'private') {
             });
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
-    MyPnky.addCommand({pattern: 'stvid$', desc: Lang.ANİM_STİCK, fromMe: true}, (async (message, match) => {
+    lusifar.addCommand({pattern: 'stvid$', desc: Lang.ANİM_STİCK, fromMe: true}, (async (message, match) => {
         const mid = message.jid
         if (message.reply_message === false) return await message.sendMessage(Lang.STİCKER_NEEDREPLY);
         await message.client.sendMessage(mid, Lang.ANİMATE, MessageType.text)
@@ -130,7 +131,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    MyPnky.addCommand({pattern: 'mp3$', fromMe: false, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
+    lusifar.addCommand({pattern: 'mp3$', fromMe: false, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.MP4TOAUDİO,MessageType.text);
@@ -150,7 +151,7 @@ else if (Config.WORKTYPE == 'public') {
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 
-    MyPnky.addCommand({pattern: 'photo$', fromMe: false, desc: Lang.STİCKER_DESC}, (async (message, match) => {    
+    lusifar.addCommand({pattern: 'photo$', fromMe: false, desc: Lang.STİCKER_DESC}, (async (message, match) => {    
         const mid = message.jid
         if (message.reply_message === false) return await message.client.sendMessage(mid, Lang.STİCKER_NEEDREPLY, MessageType.text);
         var downloading = await message.client.sendMessage(mid,Lang.STİCKER,MessageType.text);
@@ -170,7 +171,7 @@ else if (Config.WORKTYPE == 'public') {
             });
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
-   MyPnky.addCommand({pattern: 'stvid$', desc: Lang.ANİM_STİCK, fromMe: false}, (async (message, match) => {
+   lusifar.addCommand({pattern: 'stvid$', desc: Lang.ANİM_STİCK, fromMe: false}, (async (message, match) => {
         const mid = message.jid
         if (message.reply_message === false) return await message.sendMessage(Lang.STİCKER_NEEDREPLY);
         await message.client.sendMessage(mid, Lang.ANİMATE, MessageType.text)
