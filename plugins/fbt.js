@@ -6,7 +6,7 @@ kaviyaah - kavishka sandaruwan
 //don't working
 //මාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
 
-const Neotro = require('../events');
+const lusifar = require('../events');
 const {MessageType,mimetype,Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 var ruq = { cd: 'Li4vY29uZmln', encrypt: 'Code Encrypted BY RAMIYA' }
@@ -87,7 +87,7 @@ Download.Facebook{
 // -----------------------------------------------------------------------
 //                               MAIN COMMAND
 // -----------------------------------------------------------------------
-Neotro.addCommand({ pattern: 'afb ?(.*)', fromMe: ramiya , desc: 'mada'}, async (message, match) => {
+lusifar.addCommand({ pattern: 'afb ?(.*)', fromMe: ramiya , desc: 'mada'}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
 
@@ -116,7 +116,7 @@ Neotro.addCommand({ pattern: 'afb ?(.*)', fromMe: ramiya , desc: 'mada'}, async 
 
 }) //pattern close
 
-Neotro.addCommand({ pattern: 'afb ?(.*)', fromMe: teenuh , desc: 'mada'}, async (message, match) => {
+lusifar.addCommand({ pattern: 'afb ?(.*)', fromMe: teenuh , desc: 'mada'}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
 
@@ -150,7 +150,7 @@ Neotro.addCommand({ pattern: 'afb ?(.*)', fromMe: teenuh , desc: 'mada'}, async 
 //                               NOT WORKING COMMAND
 // -----------------------------------------------------------------------
 
-Neotro.addCommand({ pattern: 'xxfbsd ?(.*)', fromMe: ramiya , dontAddCommandList: true}, async (message, match) => {
+lusifar.addCommand({ pattern: 'xxfbsd ?(.*)', fromMe: ramiya , dontAddCommandList: true}, async (message, match) => {
 // අමාරුවෙන් යකො හැදුවෙ. උස්සන්න එපා තිරිසනෝ 😒
     const link = match[1]
 

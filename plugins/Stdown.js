@@ -5,7 +5,7 @@ kaviyaah - kavishka sandaruwan
 */
 
 
-const Neotro = require('../events');
+const lusifar = require('../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const fs = require('fs');
 const ffmpeg = require('fluent-ffmpeg');
@@ -17,7 +17,7 @@ const Language = require('../language');
 const Lang = Language.getString('amazone');
 const NEED_REPLY = '⚠️tag stataus'
 
-    Neotro.addCommand({pattern: 'download$', fromMe: true, desc: 'Download status to your log'}, (async (message, match) => {    
+    lusifar.addCommand({pattern: 'download$', fromMe: true, desc: 'Download status to your log'}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,NEED_REPLY, MessageType.text);
         var downloading = await message.client.sendMessage(message.jid,DW,MessageType.text);
