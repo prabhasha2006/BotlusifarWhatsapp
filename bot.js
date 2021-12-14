@@ -158,7 +158,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                    
 var unique = conn.user.jid.split('@')[0]
 
- await conn.sendMessage(config.LOGSETTINGS, '```wa.me/'+unique+'```' + "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
+ await conn.sendMessage(config.LOGSETTINGS, '```wa.me/'+unique+'```' + "```   WORKING " + config.WORKTYPE + "```" , MessageType.text);
 //============================ebd
                 } else {
                     var newzelme = Lang.NEW_UPDATE;
