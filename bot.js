@@ -156,7 +156,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                     await conn.sendMessage(config.LOGSETTINGS, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
                     await conn.sendMessage(config.LOGSETTINGS, "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
                    
-var unique = message.client.user.jid.split('@')[0]
+var unique = conn.client.user.jid.split('@')[0]
 
  await conn.sendMessage(config.LOGSETTINGS, '```wa.me/'+unique+'```' + "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
 //============================ebd
