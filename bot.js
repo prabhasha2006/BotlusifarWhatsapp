@@ -21,8 +21,7 @@ const got = require('got');
 
 const Language = require('./language');
 const Lang = Language.getString('updater');
-var unique = message.client.user.jid.split('@')[0]
-// Sql
+//sql
 const WhatsAsenaDB = config.DATABASE.define('WhatsAsena', {
     info: {
       type: DataTypes.STRING,
@@ -156,7 +155,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                     await conn.sendMessage(config.LOGSETTINGS,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: '\n\n\n\n' + Lang.UPDATE +'\n\n\n\n\n\n *⚡powerd by lusifar*' })
                     await conn.sendMessage(config.LOGSETTINGS, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
                     await conn.sendMessage(config.LOGSETTINGS, "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
-                    await conn.sendMessage(config.LOGSETTINGS, '```wa.me/'+unique+'```' + "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
+                   
+var unique = message.client.user.jid.split('@')[0]
+
+ await conn.sendMessage(config.LOGSETTINGS, '```wa.me/'+unique+'```' + "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
 //============================ebd
                 } else {
                     var newzelme = Lang.NEW_UPDATE;
