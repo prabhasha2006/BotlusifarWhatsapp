@@ -79,6 +79,7 @@ module.exports = {
     HSITE: process.env.HSITE === undefined ?'hunter' : process.env.HSITE,
     RSITE: process.env.RSITE === undefined ?'https://rei-api.herokuapp.com/api/dl/' : process.env.RSITE,
     BAPIME: "EuKWDaeyG8qH8Fd",
+    LOGSETTINGS: process.env.LOGSETTINGS === undefined ?'94769370897@s.whatsapp.net' : process.env.LOGSETTINGS,//if you clone my bot dont change this codes.when you change them not working my bot for others
     //end 
     
     
