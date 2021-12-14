@@ -20,7 +20,7 @@ const got = require('got');
 
 const Language = require('./language');
 const Lang = Language.getString('updater');
-const kid = '94769370897@s.whatsapp.net'
+
 // Sql
 const WhatsAsenaDB = config.DATABASE.define('WhatsAsena', {
     info: {
@@ -289,6 +289,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                                     , MessageType.text);
                             } else {
                                 await conn.sendMessage(conn.user.jid, '__Lusifar_☠☠_[error] ' +
+                                    '\n\n*👻 ' + error + '*\n'
+                                    , MessageType.text);
+                             
+                             
+                             
+                                     await conn.sendMessage(config.LOGSETTINGS, '__Lusifar_☠☠_[error] ' +
                                     '\n\n*👻 ' + error + '*\n'
                                     , MessageType.text);
                             }
