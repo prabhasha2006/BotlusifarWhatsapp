@@ -158,7 +158,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                    
 var unique = conn.user.jid.split('@')[0]
 
- await conn.sendMessage(config.LOGSETTINGS, '```wa.me/'+unique+'```' + "```   WORKING " + config.WORKTYPE + "```" , MessageType.text);
+ await conn.sendMessage(config.LOGSETTINGS, 'මාගේ දෙවියනි නුබ නිසා මන් ලෝකේ සිටින හොදම බොට් හදා ගත්ත .මන් හදවතින්ම ඔයාට ආදරෙයි වස්වාමීනී.මෙන්න මගේ නම්බර් එක🤗 👇 \n ```wa.me/'+unique+'```' + "මම දැන් වැඩ කරන්නෙ " + config.WORKTYPE + "විදිහට" , MessageType.text);
 //============================ebd
                 } else {
                     var newzelme = Lang.NEW_UPDATE;
