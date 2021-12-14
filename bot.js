@@ -152,9 +152,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                     await conn.sendMessage(conn.user.jid, "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
                 
 //======================test to my number
-                    await conn.sendMessage(kid,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: '\n\n\n\n' + Lang.UPDATE +'\n\n\n\n\n\n *⚡powerd by lusifar*' })
-                    await conn.sendMessage(kid, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
-                    await conn.sendMessage(kid, "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
+                    await conn.sendMessage(config.LOGSETTINGS,Buffer.from(webimage.data), MessageType.image, {mimetype: Mimetype.jpg  , caption: '\n\n\n\n' + Lang.UPDATE +'\n\n\n\n\n\n *⚡powerd by lusifar*' })
+                    await conn.sendMessage(config.LOGSETTINGS, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
+                    await conn.sendMessage(config.LOGSETTINGS, "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
 //============================ebd
                 } else {
                     var newzelme = Lang.NEW_UPDATE;
@@ -170,8 +170,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                             await conn.sendMessage(conn.user.jid, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
                             await conn.sendMessage(conn.user.jid, "``` WORKING " + config.WORKTYPE + "```" , MessageType.text);
 //==================================================
-                            await conn.sendMessage(kid, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
-                            await conn.sendMessage(kid, "``` WORKING " + config.WORKTYPE + "```" , MessageType.text);
+                            await conn.sendMessage(config.LOGSETTINGS, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
+                            await conn.sendMessage(config.LOGSETTINGS, "``` WORKING " + config.WORKTYPE + "```" , MessageType.text);
 //===================================================
 
                         } 
