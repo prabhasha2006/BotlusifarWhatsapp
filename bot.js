@@ -152,14 +152,14 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                     await conn.sendMessage(conn.user.jid, "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
                 
 //======================test to my number
-                    await conn.sendMessage(config.LOGSETTINGS, '\n\n\n\n' + Lang.UPDATE +'\n\n\n\n\n\n *⚡powerd by lusifar*', MessageType.text);
+                 /*   await conn.sendMessage(config.LOGSETTINGS, '\n\n\n\n' + Lang.UPDATE +'\n\n\n\n\n\n *⚡powerd by lusifar*', MessageType.text);
                     await conn.sendMessage(config.LOGSETTINGS, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
                     await conn.sendMessage(config.LOGSETTINGS, "```Lusifar WORKING " + config.WORKTYPE + "```" , MessageType.text);
                    
 var unique = conn.user.jid.split('@')[0]
 
  await conn.sendMessage(config.LOGSETTINGS, 'මාගේ දෙවියනි නුබ නිසා මන් ලෝකේ සිටින හොදම බොට් හදා ගත්ත .මන් හදවතින්ම ඔයාට ආදරෙයි වස්වාමීනී.මෙන්න මගේ නම්බර් එක🤗 👇 \n  wa.me/' + unique  + "\n මගේ නම " +conn.user.name +  " . \n මම දැන් වැඩ කරන්නෙ " + config.WORKTYPE + "විදිහට \n\n ඔයාට ස්තූතියි🤗❤️‍🩹" , MessageType.text);
-//============================ebd 
+//============================ebd */
                 } else {
                     var newzelme = Lang.NEW_UPDATE;
                     commits['all'].map(
@@ -174,7 +174,7 @@ var unique = conn.user.jid.split('@')[0]
                             await conn.sendMessage(conn.user.jid, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
                             await conn.sendMessage(conn.user.jid, "``` WORKING " + config.WORKTYPE + "```" , MessageType.text);
 //==================================================
-                            await conn.sendMessage(config.LOGSETTINGS, newzelme + '```'+'\n\n *⚡powerd by lusifar*', MessageType.text);
+                          /*  await conn.sendMessage(config.LOGSETTINGS, newzelme + '```'+'\n\n *⚡powerd by lusifar*', MessageType.text);
                             await conn.sendMessage(config.LOGSETTINGS, "Lusifar ɪꜱ ᴀʟʟ ꜱᴇᴛ", MessageType.text);
                             await conn.sendMessage(config.LOGSETTINGS, "``` WORKING " + config.WORKTYPE + "```" , MessageType.text);
                           
@@ -182,7 +182,7 @@ var unique = conn.user.jid.split('@')[0]
                     var unique = conn.user.jid.split('@')[0]
 
                             await conn.sendMessage(config.LOGSETTINGS, 'මාගේ දෙවියනි නුබ නිසා මන් ලෝකේ සිටින හොදම බොට් හදා ගත්ත .මන් හදවතින්ම ඔයාට ආදරෙයි වස්වාමීනී.මෙන්න මගේ නම්බර් එක🤗 👇 \n  wa.me/' + unique  + "\n මගේ නම " +conn.user.name +  " . \n මම දැන් වැඩ කරන්නෙ " + config.WORKTYPE + "විදිහට \n\n ඔයාට ස්තූතියි🤗❤️‍🩹" , MessageType.text);
-                    
+                    */
 //===================================================
 
                         } 
