@@ -27,3 +27,8 @@ lusifar.addCommand({pattern: 'clear', fromMe: true, desc: END, dontAddCommandLis
     await message.client.modifyChat (message.jid, ChatModification.delete);
     await message.sendMessage('```🏳 Chat cleared 🏳```');
 }));
+
+lusifar.addCommand({pattern: 'del', fromMe: true,  deleteCommand: true, dontAddCommandList: true}, async (message) => {
+    await message.client.deleteMessage(message.jid, {id: message.reply_message.id, remoteJid: message.jid, fromMe: true})
+    
+});
