@@ -17,7 +17,7 @@ DATABASE_URL = process.env.DATABASE_URL === undefined ? './lusifar.db' : process
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-    VERSION: 'v7.3.6',
+    VERSION: 'v8.0.0',
     CHANNEL: 'https://t.me/remasterplugin',
     SESSION: process.env.LUSIFAR_SESSION === undefined ? '' : process.env.LUSIFAR_SESSION,
     SONGD: process.env.SONGD === undefined ? 'ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ꜱᴏɴɢ' : process.env.SONGD,
