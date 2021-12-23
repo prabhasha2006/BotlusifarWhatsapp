@@ -10,7 +10,7 @@ const {MessageType} = require('@adiwajshing/baileys');
 const fs = require("fs")
 
 const Language = require('../language');
-const Lang = Language.getString('_asena');
+const Lang = Language.getString('_lusifar');
 const lusifarv = fs.readFileSync('./uploads/voicenew/lusifarv.mp3') 
 
 let WORKN = Config.WORKTYPE == 'public' ? false : true

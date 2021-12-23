@@ -30,8 +30,8 @@ if (Config.WORKTYPE == 'private') {
     lusifar.addCommand({pattern: 'animai', fromMe: true, deleteCommand: false, dontAddCommandList: true }, (async (message, match) => {
         var min = 10000; 
         var max = 50000;  
-        var asenasrandomgen = Math.floor(Math.random() * (+max - +min) + +min); 
-        var IMGWADATA = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://www.thiswaifudoesnotexist.net/example-' + asenasrandomgen + '.jpg&output=image&width=1000&height=1000', { responseType: 'arraybuffer' })
+        var Lusifarsrandomgen = Math.floor(Math.random() * (+max - +min) + +min); 
+        var IMGWADATA = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://www.thiswaifudoesnotexist.net/example-' + Lusifarsrandomgen + '.jpg&output=image&width=1000&height=1000', { responseType: 'arraybuffer' })
         await message.sendMessage(
             Buffer.from(IMGWADATA.data),
             MessageType.image, 
@@ -239,12 +239,12 @@ else if (Config.WORKTYPE == 'public') {
     lusifar.addCommand({pattern: 'animai$', fromMe: true, deleteCommand: false, dontAddCommandList: true }, (async (message, match) => {
         var min = 10000; 
         var max = 50000;  
-        var asenasrandomgen = Math.floor(Math.random() * (+max - +min) + +min); 
-        var IMGWADATA = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://www.thiswaifudoesnotexist.net/example-' + asenasrandomgen + '.jpg&output=image&width=1000&height=1000', { responseType: 'arraybuffer' })
+        var Lusifarsrandomgen = Math.floor(Math.random() * (+max - +min) + +min); 
+        var IMGWADATA = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://www.thiswaifudoesnotexist.net/example-' + Lusifarsrandomgen + '.jpg&output=image&width=1000&height=1000', { responseType: 'arraybuffer' })
         await message.sendMessage(
             Buffer.from(IMGWADATA.data),
             MessageType.image, 
-            { mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'}
+            { mimetype: Mimetype.jpg, caption: 'Made by LUSIFAR'}
         )
     }));
     lusifar.addCommand({pattern: 'colorai$', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    

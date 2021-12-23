@@ -1,10 +1,10 @@
 {
-    "__ASENAJSON__": true,
+    "__LUSIFARJSON__": true,
     "LANGUAGE": "SINHALA",
     "LANGCODE": "si",
-    "AUTHOR": "AsenaDev",
+    "AUTHOR": "LusifarDev",
     "STRINGS": {
-        "_asena": {
+        "_lusifar": {
             "COMMAND": "විධානය",
             "DESC": "විස්තර",
             "EXAMPLE": "උදාහරණ",

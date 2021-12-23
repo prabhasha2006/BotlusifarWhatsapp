@@ -4,7 +4,7 @@ you may not use this file except in compliance with the License.
 kaviyaah - kavishka sandaruwan
 */
 
-const Julie = require('../events');
+const Lusifar = require('../events');
 const {MessageType, Mimetype} = require('@adiwajshing/baileys');
 const Config = require('../config');
 const fs = require('fs');
@@ -20,10 +20,10 @@ const Lang = Language.getString('removebg');
 
 if (Config.WORKTYPE == 'private') {
 
-    Julie.addCommand({pattern: 'removebg ?(.*)', fromMe: true, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
+    Lusifar.addCommand({pattern: 'removebg ?(.*)', fromMe: true, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false || message.reply_message.image === false) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO,MessageType.text);
-        if (Config.RBG_API_KEY === false) return await message.client.sendMessage(message.jid,Lang.NO_API_KEY.replace('remove.bg', 'https://github.com/phaticusthiccy/WhatsJulieDuplicated/wiki/Remove-BG-API-Key'),MessageType.text);
+        if (Config.RBG_API_KEY === false) return await message.client.sendMessage(message.jid,Lang.NO_API_KEY.replace('remove.bg', 'https://github.com/phaticusthiccy/WhatsLusifarDuplicated/wiki/Remove-BG-API-Key'),MessageType.text);
     
         var load = await message.reply(Lang.RBGING);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -56,10 +56,10 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Julie.addCommand({pattern: 'removebg ?(.*)', fromMe: false, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
+    Lusifar.addCommand({pattern: 'removebg ?(.*)', fromMe: false, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false || message.reply_message.image === false) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO,MessageType.text);
-        if (Config.RBG_API_KEY === false) return await message.client.sendMessage(message.jid,Lang.NO_API_KEY.replace('remove.bg', 'https://github.com/phaticusthiccy/WhatsJulieDuplicated/wiki/Remove-BG-API-Key'),MessageType.text);
+        if (Config.RBG_API_KEY === false) return await message.client.sendMessage(message.jid,Lang.NO_API_KEY.replace('remove.bg', 'https://github.com/phaticusthiccy/WhatsLusifarDuplicated/wiki/Remove-BG-API-Key'),MessageType.text);
     
         var load = await message.reply(Lang.RBGING);
         var location = await message.client.downloadAndSaveMediaMessage({

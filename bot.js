@@ -22,7 +22,7 @@ const got = require('got');
 const Language = require('./language');
 const Lang = Language.getString('updater');
 //sql
-const WhatsAsenaDB = config.DATABASE.define('WhatsAsena', {
+const LUSIFARDB = config.DATABASE.define('LUSIFAR', {
     info: {
       type: DataTypes.STRING,
       allowNull: false
@@ -63,9 +63,9 @@ Array.prototype.remove = function() {
     return this;
 };
 
-async function whatsAsena () {
+async function LUSIFAR () {
     await config.DATABASE.sync();
-    var StrSes_Db = await WhatsAsenaDB.findAll({
+    var StrSes_Db = await LUSIFARDB.findAll({
         where: {
           info: 'StringSession'
         }
@@ -93,7 +93,7 @@ async function whatsAsena () {
 
         const authInfo = conn.base64EncodedAuthInfo();
         if (StrSes_Db.length < 1) {
-            await WhatsAsenaDB.create({ info: "StringSession", value: Session.createStringSession(authInfo) });
+            await LUSIFARDB.create({ info: "StringSession", value: Session.createStringSession(authInfo) });
         } else {
             await StrSes_Db[0].update({ value: Session.createStringSession(authInfo) });
         }
@@ -291,8 +291,8 @@ var unique = conn.user.jid.split('@')[0]
                             await command.function(whats, match);
                         } catch (error) {
                             if (config.LANG == 'TR' || config.LANG == 'AZ') {
-                                await conn.sendMessage(conn.user.jid, '-- HATA RAPORU [WHATSASENA] --' + 
-                                    '\n*WhatsAsena bir hata gerçekleşti!*'+
+                                await conn.sendMessage(conn.user.jid, '-- HATA RAPORU [LUSIFAR] --' + 
+                                    '\n*LUSIFAR bir hata gerçekleşti!*'+
                                     '\n_Bu hata logunda numaranız veya karşı bir tarafın numarası olabilir. Lütfen buna dikkat edin!_' +
                                     '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
                                     '\n_Bu mesaj sizin numaranıza (kaydedilen mesajlar) gitmiş olmalıdır._\n\n' +
@@ -331,4 +331,4 @@ var unique = conn.user.jid.split('@')[0]
     }
 }
 
-whatsAsena();
+LUSIFAR();

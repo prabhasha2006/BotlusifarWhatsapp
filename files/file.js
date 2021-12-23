@@ -1,7 +1,7 @@
 const fs = require('fs');
 if (fs.existsSync('exam.env')) require('dotenv').neon({ path: './exam.env' });
 
-DATABASE_URL = process.env.DATABASE_URL === undefined ? './whatsasena.db' : process.env.DATABASE_URL;
+DATABASE_URL = process.env.DATABASE_URL === undefined ? './lusifar.db' : process.env.DATABASE_URL;
 // BASE : ex
 
 module.exports = {

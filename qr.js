@@ -9,7 +9,7 @@ const {WAConnection, MessageOptions, MessageType} = require('@adiwajshing/bailey
 const {StringSession} = require('./lusifar/');
 const fs = require('fs');
 
-async function whatsAsena () {
+async function LUSIFAR () {
     const conn = new WAConnection();
     const Session = new StringSession();  
     conn.version = [2, 2119, 6]
@@ -18,7 +18,7 @@ async function whatsAsena () {
     
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('BOT')}${chalk.blue.bold('Lusifar')}
-${chalk.white.italic('AsenaString Kodu Alıcı')}
+${chalk.white.italic('LusifarString Kodu Alıcı')}
 ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
     });
     
@@ -53,4 +53,4 @@ ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
     await conn.connect();
 }
 
-whatsAsena()
+LUSIFAR()
