@@ -1,5 +1,9 @@
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+Licensed under the  GPL-3.0 License;
+you may not use this file except in compliance with the License.
+kaviyaah - kavishka sandaruwan (v 8.0.0 avalable)
 
-/* Codded by kavishka - Lusifar
+
 Unlimited API for Photooxy, Textpro and Instagram scraper.
 Material: https://www.npmjs.com/package/textmaker-thiccy
 Github: https://github.com/phaticusthiccy/TextMaker-Unlimited

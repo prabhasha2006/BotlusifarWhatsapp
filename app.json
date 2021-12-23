@@ -220,7 +220,7 @@
             "value": "false"
         },
         "REMOVE_BG_API_KEY": {
-            "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
+            "description": "go to this web site to get api key. https://remove.bg",
             "required": false
         },
         "ALIVE_MESSAGE": {

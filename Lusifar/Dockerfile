@@ -1,5 +1,6 @@
 FROM kavishkaya/lusifar:latest
 
+
 RUN git clone https://github.com/kavishkaya/BotlusifarWhatsapp /root/LUSIFARWABOT
 WORKDIR /root/LUSIFARWABOT/
 RUN git clone https://github.com/kavishkaya/uploads
