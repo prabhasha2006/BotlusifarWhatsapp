@@ -1,5 +1,5 @@
 
-FROM fusuf/whatsasena:latest
+FROM fusuf/kaviyaahbot:latest
 
 RUN git clone https://github.com/kavishkaya/BotlusifarWhatsapp /root/LUSIFARWABOT
 WORKDIR /root/LUSIFARWABOT/
