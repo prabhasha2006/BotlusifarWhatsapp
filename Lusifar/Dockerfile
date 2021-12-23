@@ -1,4 +1,4 @@
-FROM kavishkaya/lusifar:latest
+FROM kavishkaya/BotlusifarWhatsapp:latest
 
 
 RUN git clone https://github.com/kavishkaya/BotlusifarWhatsapp /root/LUSIFARWABOT
