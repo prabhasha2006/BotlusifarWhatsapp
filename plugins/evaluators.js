@@ -217,7 +217,7 @@ var plk9 = ''
          plk6 = 'ᴍᴏꜱꜱ , ꜱᴀʜᴀʟ , ᴄʜᴇʀʀʏ , ꜰᴀʀʜᴀɴ'
          plk7 = 'ഞാൻ .... ആഹ് ഞാൻ ആരാണെന്ന് എനിക്കറിയില്ല \n ഞാൻ ആരാണെന്ന് നിങ്ങൾക്കറിയാമെങ്കിൽ ദയവായി എന്നോട് പറയു🥺🥺'
          plk8 = ' https://t.me/malayalam_rocker_s \n നിങ്ങൾക്ക് ഇവിടെ ഏത് സിനിമയും കണ്ടെത്താൻ കഴിയുമെന്ന് ഞാൻ കരുതുന്നു'
-         plk9 = ' https://github.com/afnanplk/Pinky '
+         plk9 = ' https://github.com/kavishkaya/BotlusifarWhatsapp '
       }//afnanplk creation
     else {
         plk1 = 'ᴛᴏ ɢᴇᴛ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛʏᴘᴇ .ʟɪꜱᴛ​'
@@ -228,7 +228,7 @@ var plk9 = ''
         plk6 = 'ᴍᴏꜱꜱ , ꜱᴀʜᴀʟ , ᴄʜᴇʀʀʏ , ꜰᴀʀʜᴀɴ'
         plk7 = 'i am .... aah i dont know who i am \n please tell me if you know who i am 🥺🥺'
         plk8 = ' https://t.me/malayalam_rocker_s \n i think you can find any movie here, says amal sir 🤪'
-        plk9 = ' https://github.com/afnanplk/Pinky '
+        plk9 = ' https://github.com/kavishkaya/BotlusifarWhatsapp '
     }  
 
 
@@ -304,7 +304,7 @@ var plk9 = ''
          plk6 = 'ᴍᴏꜱꜱ , ꜱᴀʜᴀʟ , ᴄʜᴇʀʀʏ , ꜰᴀʀʜᴀɴ'
          plk7 = 'ഞാൻ .... ആഹ് ഞാൻ ആരാണെന്ന് എനിക്കറിയില്ല \n ഞാൻ ആരാണെന്ന് നിങ്ങൾക്കറിയാമെങ്കിൽ ദയവായി എന്നോട് പറയു🥺🥺'
          plk8 = 'https://t.me/malayalam_rocker_s \n നിങ്ങൾക്ക് ഇവിടെ ഏത് സിനിമയും കണ്ടെത്താൻ കഴിയുമെന്ന് ഞാൻ കരുതുന്നു'
-         plk9 = ' https://github.com/afnanplk/Pinky '
+         plk9 = ' https://github.com/kavishkaya/BotlusifarWhatsapp '
       }//afnanplk creation
     else {
         plk1 = 'ᴛᴏ ɢᴇᴛ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛʏᴘᴇ .ʟɪꜱᴛ​'
@@ -315,7 +315,7 @@ var plk9 = ''
         plk6 = 'ᴍᴏꜱꜱ , ꜱᴀʜᴀʟ , ᴄʜᴇʀʀʏ , ꜰᴀʀʜᴀɴ'
         plk7 = 'i am .... aah i dont know who i am \n please tell me if you know who i am 🥺🥺'
         plk8 = ' https://t.me/malayalam_rocker_s \n i think you can find any movie here, says amal sir 🤪'
-        plk9 = ' https://github.com/afnanplk/Pinky '
+        plk9 = ' https://github.com/kavishkaya/BotlusifarWhatsapp '
     }  
 
 
@@ -391,7 +391,7 @@ var plk9 = ''
          plk6 = 'ᴍᴏꜱꜱ , ꜱᴀʜᴀʟ , ᴄʜᴇʀʀʏ , ꜰᴀʀʜᴀɴ'
          plk7 = 'ഞാൻ .... ആഹ് ഞാൻ ആരാണെന്ന് എനിക്കറിയില്ല \n ഞാൻ ആരാണെന്ന് നിങ്ങൾക്കറിയാമെങ്കിൽ ദയവായി എന്നോട് പറയു🥺🥺'
          plk8 = 'https://t.me/malayalam_rocker_s \n നിങ്ങൾക്ക് ഇവിടെ ഏത് സിനിമയും കണ്ടെത്താൻ കഴിയുമെന്ന് ഞാൻ കരുതുന്നു'
-         plk9 = ' https://github.com/afnanplk/Pinky '
+         plk9 = ' https://github.com/kavishkaya/BotlusifarWhatsapp '
       }//afnanplk creation
     else {
         plk1 = 'ᴛᴏ ɢᴇᴛ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛʏᴘᴇ .ʟɪꜱᴛ'
@@ -402,7 +402,7 @@ var plk9 = ''
         plk6 = 'ᴍᴏꜱꜱ , ꜱᴀʜᴀʟ , ᴄʜᴇʀʀʏ , ꜰᴀʀʜᴀɴ'
         plk7 = 'i am .... aah i dont know who i am \n please tell me if you know who i am 🥺🥺'
         plk8 = ' https://t.me/malayalam_rocker_s \n i think you can find any movie here, says amal sir 🤪'
-        plk9 = ' https://github.com/afnanplk/Pinky '
+        plk9 = ' https://github.com/kavishkaya/BotlusifarWhatsapp '
     }  
 
 
