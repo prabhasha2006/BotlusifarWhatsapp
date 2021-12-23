@@ -65,11 +65,11 @@ const convertToWav = file => {
 lusifar.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
     if (message.message.startsWith('pinky') && conf.TALKING_PINKY !== 'true') {        
         var unique_ident = message.client.user.jid.split('@')[0]      
-        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Lusifar' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'
         var finm = message.message.replace('pinky', '').replace(' ', '')   
         var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-        if (ainame !== 'Asena') return;
+        if (ainame !== 'Lusifar') return;
         var ldet = lngDetector.detect(finm)
         var trmsg = ''
         if (ldet[0][0] !== 'english') {
@@ -98,10 +98,10 @@ lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (me
                 message.mention.map(async (jid) => {
                     if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
                         var unique_ident = message.client.user.jid.split('@')[0]      
-                        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                        let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Lusifar' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'                       
                         var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                        if (ainame !== 'Asena') return;
+                        if (ainame !== 'Lusifar') return;
                         var finm = message.message
                         var ldet = lngDetector.detect(finm)
                         var trmsg = ''
@@ -127,9 +127,9 @@ lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (me
             } else if (message.jid.includes('-') && message.reply_message !== false) {
                 if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
                     var unique_ident = message.client.user.jid.split('@')[0]      
-                    let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                    let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Lusifar' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                     var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                    if (ainame !== 'Asena') return;
+                    if (ainame !== 'Lusifar') return;
                     var finm = message.message
                     var ldet = lngDetector.detect(finm)
                     var trmsg = ''
@@ -153,9 +153,9 @@ lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (me
                 }
             } else {
                 var unique_ident = message.client.user.jid.split('@')[0]      
-                let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
+                let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Lusifar' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                 var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                if (ainame !== 'Asena') return;
+                if (ainame !== 'Lusifar') return;
                 var finm = message.message
                 var ldet = lngDetector.detect(finm)
                 var trmsg = ''
@@ -201,9 +201,9 @@ lusifar.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc,dontAddCommandList: true
                     ssc = ceviri.text
                 }
                 var unique_ident = message.client.user.jid.split('@')[0]
-                let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'       
+                let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Lusifar' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'       
                 var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
-                if (ainame !== 'Asena') return;
+                if (ainame !== 'Lusifar') return;
         
                 var son = encodeURI(ssc)
                 await axios.get('http://api.brainshop.ai/get?bid=159506&key=4QPRlFg6JPdxT8As&uid=' + unique_ident + '&msg=' + son).then(async (response) => {

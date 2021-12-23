@@ -4,7 +4,7 @@ you may not use this file except in compliance with the License.
 kaviyaah - kavishka sandaruwan
 */
 const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
-const Asena = require('../events');
+const Lusifar = require('../events');
 const Config = require('../config');
 
 const Language = require('../language');
@@ -29,7 +29,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 }
 if (Config.WORKTYPE == 'admin') {
     
-Asena.addCommand({pattern: 'ban ?(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
+Lusifar.addCommand({pattern: 'ban ?(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.BAN_DESC}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN ,MessageType.text ,{quoted: message.data });
@@ -69,7 +69,7 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: false, dontAddCommandList: true,
     }
 }));
 
-Asena.addCommand({pattern: 'add(?: |$)(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.ADD_DESC}, (async (message, match) => {  
+Lusifar.addCommand({pattern: 'add(?: |$)(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.ADD_DESC}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
@@ -105,7 +105,7 @@ Asena.addCommand({pattern: 'add(?: |$)(.*)', fromMe: false, dontAddCommandList: 
     }
 }));
 
-Asena.addCommand({pattern: 'promote ?(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.PROMOTE_DESC}, (async (message, match) => {    
+Lusifar.addCommand({pattern: 'promote ?(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.PROMOTE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
@@ -165,7 +165,7 @@ Asena.addCommand({pattern: 'promote ?(.*)', fromMe: false, dontAddCommandList: t
     }
 }));
 
-Asena.addCommand({pattern: 'demote ?(.*)', fromMe: false, onlyGroup: true, desc: Lang.DEMOTE_DESC, dontAddCommandList: true}, (async (message, match) => {    
+Lusifar.addCommand({pattern: 'demote ?(.*)', fromMe: false, onlyGroup: true, desc: Lang.DEMOTE_DESC, dontAddCommandList: true}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN ,MessageType.text ,{quoted: message.data });
@@ -197,7 +197,7 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: false, onlyGroup: true, desc:
     }
 }));
 
-Asena.addCommand({pattern: 'mute ?(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.MUTE_DESC}, (async (message, match) => {    
+Lusifar.addCommand({pattern: 'mute ?(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.MUTE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN ,MessageType.text ,{quoted: message.data });
@@ -1555,7 +1555,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: false, dontAddCommandList: true
     }
 }));
 
-Asena.addCommand({pattern: 'unmute ?(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.UNMUTE_DESC}, (async (message, match) => {    
+Lusifar.addCommand({pattern: 'unmute ?(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.UNMUTE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
@@ -1571,7 +1571,7 @@ Asena.addCommand({pattern: 'unmute ?(.*)', fromMe: false, dontAddCommandList: tr
     }
 }));
 
-Asena.addCommand({pattern: 'invite ?(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.INVITE_DESC}, (async (message, match) => {    
+Lusifar.addCommand({pattern: 'invite ?(.*)', fromMe: false, dontAddCommandList: true, onlyGroup: true, desc: Lang.INVITE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });
@@ -1580,7 +1580,7 @@ Asena.addCommand({pattern: 'invite ?(.*)', fromMe: false, dontAddCommandList: tr
     await message.client.sendMessage(message.jid,Lang.INVITE + ' https://chat.whatsapp.com/' + invite, MessageType.text);
 }));
 
-Asena.addCommand({pattern: 'rename ?(.*)', onlyGroup: false, fromMe: true, desc:'change group name'}, (async (message, match) => {
+Lusifar.addCommand({pattern: 'rename ?(.*)', onlyGroup: false, fromMe: true, desc:'change group name'}, (async (message, match) => {
     var im = await checkImAdmin(message);
     var us = await checkUsAdmin(message);
     if (!us) return await message.client.sendMessage(message.jid,Lang.PLKADMIN,MessageType.text ,{quoted: message.data });

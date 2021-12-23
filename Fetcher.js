@@ -1,10 +1,7 @@
-
-/* Copyright (C) 2021 ALEXA - RAMIYA
+/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-ALEXA - RAMIYA
-DON'T COPY SCRIPT
-Thanks Node Fetch Developers :)
+kaviyaah - kavishka sandaruwan
 */
 const fetch = require('node-fetch')
 

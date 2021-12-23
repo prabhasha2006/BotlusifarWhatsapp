@@ -78,7 +78,7 @@
             "RESTART_DESC": "WhatsAsena'yı yeniden başlatın",
             "RESTART_MSG": "```Yeniden Başlatılıyor...```",
             "SHUTDOWN_DESC": "WhatsAsena'yı kapatır.",
-            "SHUTDOWN_MSG": "*Belki birgün tekrar görüşebiliriz..\nHoşcakal Sahip..*\n```Asena Kapatılıyor... ⛔```",
+            "SHUTDOWN_MSG": "*Belki birgün tekrar görüşebiliriz..\nHoşcakal Sahip..*\n```Lusifar Kapatılıyor... ⛔```",
             "DYNO_DESC": "Heroku dyno kullanımını kontrol edin",
             "DYNO_TOTAL": "```Toplam Kota```",
             "DYNO_USED": "```Kullanılan kota```",
