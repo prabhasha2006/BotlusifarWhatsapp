@@ -175,8 +175,8 @@ lusifar.addCommand({pattern: 'devil ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/devil.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/devil.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/devil.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/devil.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -194,8 +194,8 @@ lusifar.addCommand({pattern: 'bear ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/bear.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/bear.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/bear.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/bear.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -222,8 +222,8 @@ lusifar.addCommand({pattern: 'wolf ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/wolf.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/wolf.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/wolf.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/wolf.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -241,8 +241,8 @@ lusifar.addCommand({pattern: 'neon ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/neon.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/neon.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/neon.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -260,8 +260,8 @@ lusifar.addCommand({pattern: '2neon ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/neon2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon2.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/neon2.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/neon2.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -279,8 +279,8 @@ lusifar.addCommand({pattern: 'light ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/li.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/li.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/li.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/li.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -298,8 +298,8 @@ lusifar.addCommand({pattern: 'joker ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/joker.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/joker.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/joker.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/joker.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -326,8 +326,8 @@ lusifar.addCommand({pattern: 'ninja ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/ninja.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ninja.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/ninja.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/ninja.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -345,8 +345,8 @@ lusifar.addCommand({pattern: 'glitter ?(.*)', fromMe: wk, dontAddCommandList: tr
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/tt.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tt.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/tt.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/tt.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -364,8 +364,8 @@ lusifar.addCommand({pattern: 'bokeh ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/bkh.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/bkh.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/bkh.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/bkh.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -392,8 +392,8 @@ lusifar.addCommand({pattern: 'marvel ?(.*)', fromMe: wk, dontAddCommandList: tru
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/marvel.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/marvel.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/marvel.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/marvel.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -420,8 +420,8 @@ lusifar.addCommand({pattern: '2marvel ?(.*)', fromMe: wk, dontAddCommandList: tr
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/mar2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/mar2.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/mar2.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/mar2.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -448,8 +448,8 @@ lusifar.addCommand({pattern: 'avengers ?(.*)', fromMe: wk, dontAddCommandList: t
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/aven.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/aven.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/aven.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/aven.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -476,8 +476,8 @@ lusifar.addCommand({pattern: 'glitch ?(.*)', fromMe: wk, dontAddCommandList: tru
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/tt2.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tt2.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/tt2.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/tt2.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -504,8 +504,8 @@ lusifar.addCommand({pattern: 'graf ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/ttgra.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ttgra.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/ttgra.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/ttgra.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -532,8 +532,8 @@ lusifar.addCommand({pattern: '2graf ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/t2gra.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/t2gra.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/t2gra.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/t2gra.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -560,8 +560,8 @@ lusifar.addCommand({pattern: 'lion ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/lion.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/lion.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/lion.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/lion.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -579,8 +579,8 @@ lusifar.addCommand({pattern: '3neon ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/neon3.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon3.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/neon3.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/neon3.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -598,8 +598,8 @@ lusifar.addCommand({pattern: 'ice ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/ice.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ice.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/ice.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/ice.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -626,8 +626,8 @@ lusifar.addCommand({pattern: 'space ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/space.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/space.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/space.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/space.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -645,8 +645,8 @@ lusifar.addCommand({pattern: 'smoke ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/smoke.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/smoke.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/smoke.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/smoke.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -660,8 +660,8 @@ lusifar.addCommand({pattern: 'glow ?(.*)', fromMe: wk, dontAddCommandList: true}
         });
     };
     var uri = encodeURI(match[1])
-    await download(`https://api.xteam.xyz/photooxy/neonlight?text=${uri}&APIKEY=da5fb2b73ae3e451`, '/root/WhatsAsenaDuplicated/glowttp.jpg', async() => {                          
-        await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/glowttp.jpg'), MessageType.image, { caption: Config.AFN })
+    await download(`https://api.xteam.xyz/photooxy/neonlight?text=${uri}&APIKEY=da5fb2b73ae3e451`, '/root/LUSIFARWABOT/glowttp.jpg', async() => {                          
+        await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/glowttp.jpg'), MessageType.image, { caption: Config.AFN })
     })
 }));
 lusifar.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
@@ -675,8 +675,8 @@ lusifar.addCommand({pattern: 'fire ?(.*)', fromMe: wk, dontAddCommandList: true}
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/tfire.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tfire.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/tfire.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/tfire.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -694,8 +694,8 @@ lusifar.addCommand({pattern: 'harry ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/hp.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/hp.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/hp.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/hp.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -713,8 +713,8 @@ lusifar.addCommand({pattern: '4neon ?(.*)', fromMe: wk, dontAddCommandList: true
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/t4n.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/t4n.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -732,8 +732,8 @@ lusifar.addCommand({pattern: 'cemetery ?(.*)', fromMe: wk, dontAddCommandList: t
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/cmth.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/cmth.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/cmth.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/cmth.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)
@@ -751,8 +751,8 @@ lusifar.addCommand({pattern: 'cup ?(.*)', fromMe: wk, dontAddCommandList: true},
                   });
               };
 
-              await download(`${data}`, '/root/WhatsAsenaDuplicated/cup.jpg', async() => {                          
-                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/cup.jpg'), MessageType.image, { caption: Config.AFN })
+              await download(`${data}`, '/root/LUSIFARWABOT/cup.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/LUSIFARWABOT/cup.jpg'), MessageType.image, { caption: Config.AFN })
               })
           } catch(err) { 
               console.log(err)

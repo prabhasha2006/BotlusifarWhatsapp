@@ -119,11 +119,11 @@ if (Config.WORKTYPE == 'private') {
         });
         await webp2mp4File(savedFilename).then(async (rest) => {
             await Axios({ method: "GET", url: rest.result, responseType: "stream"}).then(({ data }) => {
-                const saving = data.pipe(fs.createWriteStream('/root/WhatsAsenaDuplicated/stweb.mp4'))
+                const saving = data.pipe(fs.createWriteStream('/root/LUSIFARWABOT/stweb.mp4'))
                 saving.on("finish", async () => {
-                    await message.client.sendMessage(mid, fs.readFileSync('/root/WhatsAsenaDuplicated/stweb.mp4'), MessageType.video, { mimetype: Mimetype.mp4, caption: Config.AFN, quoted: message.data })
+                    await message.client.sendMessage(mid, fs.readFileSync('/root/LUSIFARWABOT/stweb.mp4'), MessageType.video, { mimetype: Mimetype.mp4, caption: Config.AFN, quoted: message.data })
                     if (fs.existsSync(savedFilename)) fs.unlinkSync(savedFilename)
-                    if (fs.existsSync('/root/WhatsAsenaDuplicated/stweb.mp4')) fs.unlinkSync('/root/WhatsAsenaDuplicated/stweb.mp4')
+                    if (fs.existsSync('/root/LUSIFARWABOT/stweb.mp4')) fs.unlinkSync('/root/LUSIFARWABOT/stweb.mp4')
                 })
             })
         })
@@ -184,11 +184,11 @@ else if (Config.WORKTYPE == 'public') {
         });
         await webp2mp4File(savedFilename).then(async (rest) => {
             await Axios({ method: "GET", url: rest.result, responseType: "stream"}).then(({ data }) => {
-                const saving = data.pipe(fs.createWriteStream('/root/WhatsAsenaDuplicated/stweb.mp4'))
+                const saving = data.pipe(fs.createWriteStream('/root/LUSIFARWABOT/stweb.mp4'))
                 saving.on("finish", async () => {
-                    await message.client.sendMessage(mid, fs.readFileSync('/root/WhatsAsenaDuplicated/stweb.mp4'), MessageType.video, { mimetype: Mimetype.mp4, caption: Config.AFN, quoted: message.data })
+                    await message.client.sendMessage(mid, fs.readFileSync('/root/LUSIFARWABOT/stweb.mp4'), MessageType.video, { mimetype: Mimetype.mp4, caption: Config.AFN, quoted: message.data })
                     if (fs.existsSync(savedFilename)) fs.unlinkSync(savedFilename)
-                    if (fs.existsSync('/root/WhatsAsenaDuplicated/stweb.mp4')) fs.unlinkSync('/root/WhatsAsenaDuplicated/stweb.mp4')
+                    if (fs.existsSync('/root/LUSIFARWABOT/stweb.mp4')) fs.unlinkSync('/root/LUSIFARWABOT/stweb.mp4')
                 })
             })
         })
