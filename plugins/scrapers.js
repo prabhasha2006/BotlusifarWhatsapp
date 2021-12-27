@@ -402,50 +402,6 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
         });
     }));
 
-    lusifar.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC }, async (message, match) => {
-
-        const userName = match[1]
- 
-        if (userName === '') return await message.client.sendMessage(message.jid, Glang.REPLY, MessageType.text)
-
-        await axios
-          .get(`https://videfikri.com/api/github/?username=${userName}`)
-          .then(async (response) => {
-
-            const {
-              hireable,
-              company,
-              profile_pic,
-              username,
-              fullname, 
-              blog, 
-              location,
-              email,
-              public_repository,
-              biografi,
-              following,
-              followers,
-              public_gists,
-              profile_url,
-              last_updated,
-              joined_on,
-            } = response.data.result
-
-            const githubscrap = await axios.get(profile_pic, 
-              {responseType: 'arraybuffer',
-            })
-
-            const msg = `*${Glang.USERNAME}* ${username} \n*${Glang.NAME}* ${fullname} \n*${Glang.FOLLOWERS}* ${followers} \n*${Glang.FOLLOWİNG}* ${following} \n*${Glang.BİO}* ${biografi} \n*${Glang.REPO}* ${public_repository} \n*${Glang.GİST}* ${public_gists} \n*${Glang.LOCATİON}* ${location} \n*${Glang.MAİL}* ${email} \n*${Glang.BLOG}* ${blog} \n*${Glang.COMPANY}* ${company} \n*${Glang.HİRE}* ${hireable === "true" ? Glang.HİRE_TRUE : Glang.HİRE_FALSE} \n*${Glang.JOİN}* ${joined_on} \n*${Glang.UPDATE}* ${last_updated} \n*${Glang.URL}* ${profile_url}`
-
-            await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
-              caption: msg,
-            })
-          })
-          .catch(
-            async (err) => await message.client.sendMessage(message.jid, Glang.NOT, MessageType.text),
-          )
-      },
-    )
 
     lusifar.addCommand({pattern: 'lyric ?(.*)', fromMe: true, desc: Slang.LY_DESC }, (async (message, match) => { 
 
@@ -632,6 +588,18 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
                 await message.reply(`Error : \n${err.message}`, MessageType.text)
             }
         } 
+            else if (match[1] === "sl" || match[1] === "sL" || match[1] === "Sl" || match[1] === "SL" || match[1] === "SRI LANKA" || match[1] === "SRI lanka" || match[1] === "Sri lanka" || match[1] === "sri lanka"|| match[1].includes('Sri lanka') ) {
+        try{
+            const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/sri%20lanka").then(async ok  => {
+                resp = JSON.parse(ok.body);
+                await message.reply(`🇱🇰 *Datas for SRI LANAK:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+            });
+
+        } catch (err) {
+            await message.reply(`Error : \n${err.message}`, MessageType.text)
+        }
+    }
         else if (match[1] === "id" || match[1] === "İd" || match[1] === "İD" || match[1] === "ıd" || match[1] === "Id" || match[1] === "ID" || match[1].includes('ındonesia') ) {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Indonesia").then(async ok  => {
@@ -839,50 +807,7 @@ else if (config.WORKTYPE == 'public') {
             });
     }));
 
-    lusifar.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC }, async (message, match) => {
 
-        const userName = match[1]
- 
-        if (userName === '') return await message.client.sendMessage(message.jid, Glang.REPLY, MessageType.text)
-
-        await axios
-          .get(`https://videfikri.com/api/github/?username=${userName}`)
-          .then(async (response) => {
-
-            const {
-              hireable,
-              company,
-              profile_pic,
-              username,
-              fullname, 
-              blog, 
-              location,
-              email,
-              public_repository,
-              biografi,
-              following,
-              followers,
-              public_gists,
-              profile_url,
-              last_updated,
-              joined_on,
-            } = response.data.result
-
-            const githubscrap = await axios.get(profile_pic, 
-              {responseType: 'arraybuffer',
-            })
-
-            const msg = `*${Glang.USERNAME}* ${username} \n*${Glang.NAME}* ${fullname} \n*${Glang.FOLLOWERS}* ${followers} \n*${Glang.FOLLOWİNG}* ${following} \n*${Glang.BİO}* ${biografi} \n*${Glang.REPO}* ${public_repository} \n*${Glang.GİST}* ${public_gists} \n*${Glang.LOCATİON}* ${location} \n*${Glang.MAİL}* ${email} \n*${Glang.BLOG}* ${blog} \n*${Glang.COMPANY}* ${company} \n*${Glang.HİRE}* ${hireable === "true" ? Glang.HİRE_TRUE : Glang.HİRE_FALSE} \n*${Glang.JOİN}* ${joined_on} \n*${Glang.UPDATE}* ${last_updated} \n*${Glang.URL}* ${profile_url}`
-
-            await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
-              caption: msg,
-            })
-          })
-          .catch(
-            async (err) => await message.client.sendMessage(message.jid, Glang.NOT, MessageType.text),
-          )
-      },
-    )
       lusifar.addCommand({pattern: 'number', fromMe: false, desc: Lang.NUMBER}, (async (message, match) => {
 
             const p_lk = 'BEGIN:VCARD\n'
@@ -1124,6 +1049,18 @@ await message.client.sendMessage(message.jid, {displayname: "PINKY", vcard: p_lk
                 await message.reply(`Error : \n${err.message}`, MessageType.text)
             }
         } 
+            else if (match[1] === "sl" || match[1] === "sL" || match[1] === "Sl" || match[1] === "SL" || match[1] === "SRI LANKA" || match[1] === "SRI lanka" || match[1] === "Sri lanka" || match[1] === "sri lanka"|| match[1].includes('Sri lanka') ) {
+        try{
+            const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/sri%20lanka").then(async ok  => {
+                resp = JSON.parse(ok.body);
+                await message.reply(`🇱🇰 *Datas for SRI LANAK:*\n😷 *Total Cases:* ${resp.cases}\n🏥 *Daily Cases:* ${resp.todayCases}\n⚰️ *Total Deaths:* ${resp.deaths}\n☠️ *Daily Deaths:* ${resp.todayDeaths}\n💊 *Total Recovered:* ${resp.recovered}\n😷 *Active Cases:* ${resp.active}\n🆘 *Critical Cases:* ${resp.critical}\n🧪 *Total Test:* ${resp.totalTests}`);
+
+            });
+
+        } catch (err) {
+            await message.reply(`Error : \n${err.message}`, MessageType.text)
+        }
+    }
         else if (match[1] === "nl" || match[1] === "Nl" || match[1] === "NL" || match[1].includes('netherland') ) {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/Netherlands").then(async ok  => {
