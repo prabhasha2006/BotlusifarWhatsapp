@@ -178,8 +178,6 @@ if (config.YT_INFO == 'false') {
 
 
 
-
-
 const lusifar = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const ytdl = require('ytdl-core');
@@ -197,11 +195,7 @@ let tk = config.WORKTYPE == 'public' ? false : true
 let PUBFM = config.WORKTYPE == 'public' ? true : true
 
 
-lusifar.addCommand({
-	            pattern: 'video ?(.*)', 
-		    fromMe: tk, 
-		    desc: YTV_DESC
-		                    }, (async (message, match) => { 
+lusifar.addCommand({pattern: 'video ?(.*)', fromMe: tk, desc: YTV_DESC}, (async (message, match) => { 
 
 await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data});   
     
@@ -229,12 +223,12 @@ await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quot
             return await message.client.sendMessage(message.jid,NO_RESULT,MessageType.text);
         }
         await axios
-        .get(`https://rei-api.herokuapp.com/api/dl/ytavv2?url=https://www.youtube.com/watch?v=`+VID)
+        .get(`https://api-alphabot.herokuapp.com/api/downloader/youtube/video?url=https://www.youtube.com/watch?v=`+VID+`&apikey=Alphabot`)
         .then(async (response) => {
           const {
-            link,
-          } = response.data.result
-          const videoBuffer = await axios.get(link, {responseType: 'arraybuffer'})
+            dl_link,
+          } = response.data.results
+          const videoBuffer = await axios.get(dl_link, {responseType: 'arraybuffer'})
           await message.client.sendMessage(message.jid,YSTV_UP,MessageType.text , {quoted: message.data});
           await message.client.sendMessage(message.jid,Buffer.from(videoBuffer.data), MessageType.video, {quoted: message.data ,mimetype: Mimetype.mp4, ptt: false})
         })
@@ -244,13 +238,7 @@ await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quot
 
 // public mode for me
 
-lusifar.addCommand({
-	
-	            pattern: 'video ?(.*)', 
-		    fromMe: PUBFM , 
-	            desc: YTV_DESC
-
-                                       }, (async (message, match) => { 
+lusifar.addCommand({ pattern: 'video ?(.*)', fromMe: PUBFM , desc: YTV_DESC}, (async (message, match) => { 
 
 await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data});   
     
@@ -278,15 +266,16 @@ await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quot
             return await message.client.sendMessage(message.jid,NO_RESULT,MessageType.text);
         }
         await axios
-        .get(`https://rei-api.herokuapp.com/api/dl/ytavv2?url=https://www.youtube.com/watch?v=`+VID)
+        .get(`https://api-alphabot.herokuapp.com/api/downloader/youtube/video?url=https://www.youtube.com/watch?v=`+VID+`&apikey=Alphabot`)
         .then(async (response) => {
           const {
-            link,
-          } = response.data.result
-          const videoBuffer = await axios.get(link, {responseType: 'arraybuffer'})
+            dl_link,
+          } = response.data.results
+          const videoBuffer = await axios.get(dl_link, {responseType: 'arraybuffer'})
           await message.client.sendMessage(message.jid,YSTV_UP,MessageType.text , {quoted: message.data});
           await message.client.sendMessage(message.jid,Buffer.from(videoBuffer.data), MessageType.video, {quoted: message.data ,mimetype: Mimetype.mp4, ptt: false})
         })
         
 }))
+
 
