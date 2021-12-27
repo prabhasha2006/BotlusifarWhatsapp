@@ -26,15 +26,15 @@ lusifar.addCommand({ pattern: 'fb ?(.*)', fromMe: KSP , desc: 'facebook video do
     if (!link) return await message.sendMessage("🧛‍♂️ *Give Vaild FB Link* ")
     await message.sendMessage(DOWNMSG)
 	
-	var url = `${Config.SITE1}socialmedia/${Config.FBS2}=${link}&apikey=${Config.BAPIME}`
+	var url = `https://api.lolhuman.xyz/api/facebook?apikey=https://www.amdaniwasa.com&url=${link}`
 				// 
 				await axios 
 					.get(`${url}`)
 					.then(async(response) => {
 						const {
-							hd
-						} = response.data.result
-						const kavifb = await axios.get(hd, {responseType: 'arraybuffer'})
+							result
+						} = response.data
+						const kavifb = await axios.get(result, {responseType: 'arraybuffer'})
 						await new Promise(r => setTimeout(r, 2000));
 						await message.client.sendMessage(message.jid,UPMSG,MessageType.text);
 						await message.sendMessage(Buffer.from(kavifb.data), MessageType.video, {caption: capt,})
@@ -50,15 +50,15 @@ lusifar.addCommand({ pattern: 'fb ?(.*)', fromMe: KSKK , dontAddCommandList: tru
     if (!link) return await message.sendMessage("🧛‍♂️ *Give Vaild FB Link* ")
     await message.sendMessage(DOWNMSG)
 	
-	var url = `${Config.SITE1}socialmedia/${Config.FBS2}=${link}&apikey=${Config.BAPIME}`
+	var url = `https://api.lolhuman.xyz/api/facebook?apikey=https://www.amdaniwasa.com&url=${link}`
 				// 
 				await axios 
 					.get(`${url}`)
 					.then(async(response) => {
 						const {
-							hd
-						} = response.data.result
-						const kavifb = await axios.get(hd, {responseType: 'arraybuffer'})
+							result
+						} = response.data
+						const kavifb = await axios.get(result, {responseType: 'arraybuffer'})
 						await new Promise(r => setTimeout(r, 2000));
 						await message.client.sendMessage(message.jid,UPMSG,MessageType.text);
 						await message.sendMessage(Buffer.from(kavifb.data), MessageType.video, {caption: capt,})
@@ -78,15 +78,15 @@ lusifar.addCommand({ pattern: 'xxfbsd ?(.*)', fromMe:KSKK , dontAddCommandList: 
     if (!link) return await message.sendMessage("🧛‍♂️ *Give Vaild FB Link* ")
     await message.sendMessage('⛔️ _*ERROR 404*_')
 	
-	var url = `${Config.SITE1}socialmedia/${Config.FBS2}=${link}&apikey=${Config.BAPIME}`
+	var url = `https://api.lolhuman.xyz/api/facebook?apikey=https://www.amdaniwasa.com&url=${link}`
 				// 
 				await axios 
 					.get(`${url}`)
 					.then(async(response) => {
 						const {
-							sd
-						} = response.data.result
-						const kavifb = await axios.get(sd, {responseType: 'arraybuffer'})
+							result
+						} = response.data
+						const kavifb = await axios.get(result, {responseType: 'arraybuffer'})
 						await new Promise(r => setTimeout(r, 2000));
 						await message.client.sendMessage(message.jid,UPMSG,MessageType.text);
 						await message.sendMessage(Buffer.from(kavifb.data), MessageType.video, {caption: capt,})
@@ -95,4 +95,4 @@ lusifar.addCommand({ pattern: 'xxfbsd ?(.*)', fromMe:KSKK , dontAddCommandList: 
 							)
 					})
 					
-}) //pattern close
+})
