@@ -11,9 +11,9 @@ const lusifar = require('../events');
 const {MessageType, Mimetype } = require('@adiwajshing/baileys');
 const FilterDb = require('./sql/filters');
 const Config = require('../config')
-const Pinky = require('../lusifar')
+const LusiFar = require('../lusifar')
 const afn = Config.PLKS !== false ? Config.PLKS.split(',') : [];
-const afnp = Pinky.PLKAFN !== false ? Pinky.PLKAFN.split(',') : [];
+const afnp = LusiFar.PLKAFN !== false ? LusiFar.PLKAFN.split(',') : [];
 const jid = Config.DISBGM !== false ? Config.DISBGM.split(',') : [];
 const Language = require('../language');
 const Lang = Language.getString('filters');

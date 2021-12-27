@@ -10,7 +10,7 @@ const exec = require('child_process').exec;
 const os = require("os");
 const fs = require('fs');
 const Config = require('../config')
-const Pinky = require('../lusifar')
+const LusiFar = require('../lusifar')
 const Language = require('../language');
 const Lang = Language.getString('evaluators');
 const SLang = Language.getString('conventer');
@@ -194,7 +194,7 @@ lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (me
 var alllink_var = ''
 async function afn() {
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        AI_var = vars.Z_PINKY_AI
+        AI_var = vars.LUSIFAR_AI
     });
 }
 afn()
@@ -220,14 +220,14 @@ var plk9 = ''
          plk9 = ' https://github.com/kavishkaya/BotlusifarWhatsapp '
       }//afnanplk creation
     else {
-        plk1 = 'ᴛᴏ ɢᴇᴛ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛʏᴘᴇ .ʟɪꜱᴛ​'
+        plk1 = 'ᴛᴏ ɢᴇᴛ ᴀʟʟ ᴄᴏᴍᴍᴀɴᴅꜱ ᴛʏᴘᴇ .lusifar'
         plk2 = 'hey am '
         plk3 = 'ʏᴇꜱ ᴛᴇʟʟ ᴍᴇ, ʜᴏᴡ ᴄᴀɴ ɪ ʜᴇʟᴘ ʏᴏᴜ'
         plk4 = '👻Boo-o-o-oh👻'
         plk5 = 'i know him he is my creator'
         plk6 = 'ᴍᴏꜱꜱ , ꜱᴀʜᴀʟ , ᴄʜᴇʀʀʏ , ꜰᴀʀʜᴀɴ'
         plk7 = 'i am .... aah i dont know who i am \n please tell me if you know who i am 🥺🥺'
-        plk8 = ' https://t.me/malayalam_rocker_s \n i think you can find any movie here, says amal sir 🤪'
+        plk8 = ' https://t.me/malayalam_rocker_s \n i think you can find any movie here, says kavishka 🤪'
         plk9 = ' https://github.com/kavishkaya/BotlusifarWhatsapp '
     }  
 
@@ -238,18 +238,18 @@ lusifar.addCommand({on: 'text', fromMe: false,onlyGroup: true, deleteCommand: fa
         let regex1 = new RegExp('command ')
         let regex2 = new RegExp('name ')
         let regex3 = new RegExp('bot ')
-        let regex4 = new RegExp('pinky ')
-        let regex5 = new RegExp('afnanplk ')
+        let regex4 = new RegExp('kavishka')
+        let regex5 = new RegExp('Sandaruwan')
         let regex6 = new RegExp('supporters ')
         let regex7 = new RegExp('Who are you ')
         let regex8 = new RegExp('movie ')
         let regex9 = new RegExp('Git ')
-        let regex10 = new RegExp(Pinky.OA_NAME)
+        let regex10 = new RegExp(LusiFar.OA_NAME)
         if (regex1.test(message.message)) {              
             await message.client.sendMessage(message.jid,plk1, MessageType.text, {quoted: message.data })
         } 
         else if (regex2.test(message.message)) {
-           await message.client.sendMessage(message.jid,plk2 + Pinky.OB_NAME, MessageType.text, {quoted: message.data })
+           await message.client.sendMessage(message.jid,plk2 + LusiFar.OB_NAME, MessageType.text, {quoted: message.data })
         }
          else if (regex3.test(message.message)) {
             await message.client.sendMessage(message.jid,plk3, MessageType.text, {quoted: message.data })
@@ -273,7 +273,7 @@ lusifar.addCommand({on: 'text', fromMe: false,onlyGroup: true, deleteCommand: fa
    await message.client.sendMessage(message.jid,plk9, MessageType.text, {quoted: message.data })
         }
         else if (regex10.test(message.message)) {
-   await message.client.sendMessage(message.jid,Pinky.OA_REPLY, MessageType.text, {quoted: message.data })
+   await message.client.sendMessage(message.jid,LusiFar.OA_REPLY, MessageType.text, {quoted: message.data })
         }      
    }
 }));
@@ -281,7 +281,7 @@ lusifar.addCommand({on: 'text', fromMe: false,onlyGroup: true, deleteCommand: fa
 var alllink_var = ''
 async function afn() {
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        AI_var = vars.Z_PINKY_AI
+        AI_var = vars.LUSIFAR_AI
     });
 }
 afn()
@@ -331,12 +331,12 @@ lusifar.addCommand({on: 'text', fromMe: false,onlyPm:true , deleteCommand: false
         let regex7 = new RegExp('Who are you ')
         let regex8 = new RegExp('movie ')
         let regex9 = new RegExp('Git ')
-        let regex10 = new RegExp(Pinky.OA_NAME)
+        let regex10 = new RegExp(LusiFar.OA_NAME)
         if (regex1.test(message.message)) {              
             await message.client.sendMessage(message.jid,plk1, MessageType.text, {quoted: message.data })
         } 
         else if (regex2.test(message.message)) {
-           await message.client.sendMessage(message.jid,plk2 + Pinky.OB_NAME, MessageType.text, {quoted: message.data })
+           await message.client.sendMessage(message.jid,plk2 + LusiFar.OB_NAME, MessageType.text, {quoted: message.data })
         }
          else if (regex3.test(message.message)) {
             await message.client.sendMessage(message.jid,plk3, MessageType.text, {quoted: message.data })
@@ -360,7 +360,7 @@ lusifar.addCommand({on: 'text', fromMe: false,onlyPm:true , deleteCommand: false
    await message.client.sendMessage(message.jid,plk9, MessageType.text, {quoted: message.data })
         }
         else if (regex10.test(message.message)) {
-   await message.client.sendMessage(message.jid,Pinky.OA_REPLY, MessageType.text, {quoted: message.data })
+   await message.client.sendMessage(message.jid,LusiFar.OA_REPLY, MessageType.text, {quoted: message.data })
         }      
    }
 }));
@@ -368,7 +368,7 @@ lusifar.addCommand({on: 'text', fromMe: false,onlyPm:true , deleteCommand: false
 var alllink_var = ''
 async function afn() {
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        AI_var = vars.Z_PINKY_AI
+        AI_var = vars.LUSIFAR_AI
     });
 }
 afn()
@@ -418,12 +418,12 @@ lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (me
         let regex7 = new RegExp('Who are you ')
         let regex8 = new RegExp('movie ')
         let regex9 = new RegExp('Git ')
-        let regex10 = new RegExp(Pinky.OA_NAME)
+        let regex10 = new RegExp(LusiFar.OA_NAME)
         if (regex1.test(message.message)) {              
             await message.client.sendMessage(message.jid,plk1, MessageType.text, {quoted: message.data })
         } 
         else if (regex2.test(message.message)) {
-           await message.client.sendMessage(message.jid,plk2 + Pinky.OB_NAME, MessageType.text, {quoted: message.data })
+           await message.client.sendMessage(message.jid,plk2 + LusiFar.OB_NAME, MessageType.text, {quoted: message.data })
         }
          else if (regex3.test(message.message)) {
             await message.client.sendMessage(message.jid,plk3, MessageType.text, {quoted: message.data })
@@ -447,7 +447,7 @@ lusifar.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (me
    await message.client.sendMessage(message.jid,plk9, MessageType.text, {quoted: message.data })
         }
         else if (regex10.test(message.message)) {
-   await message.client.sendMessage(message.jid,Pinky.OA_REPLY, MessageType.text, {quoted: message.data })
+   await message.client.sendMessage(message.jid,LusiFar.OA_REPLY, MessageType.text, {quoted: message.data })
         }      
    }
 }));
