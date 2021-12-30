@@ -194,9 +194,21 @@ const config = require('../config');
 let tk = config.WORKTYPE == 'public' ? false : true
 let PUBFM = config.WORKTYPE == 'public' ? true : true
 
+var cant_send = ''
+var size_cant = ''
+
+
+if (config.LANG == 'SI') {
+cant_send = 'ඔබ ඉල්ලූ වීඩියෝව ඔබ වෙත එවීමට නොහැක.මන්දටත් එය "'
+size_cant = '" කින් සමන්විත වේ.'
+}
+if (config.LANG == 'EN'){
+cant_send = "Sorry! We can't send that video. Because it size " 
+size_cant = ".\n Thank you"
+}
 
 lusifar.addCommand({pattern: 'video ?(.*)', fromMe: tk, desc: YTV_DESC}, (async (message, match) => { 
-
+if(match[1] === '') return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text , {quoted: message.data}); 
 await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data});   
     
     var VID = '';
@@ -226,56 +238,61 @@ await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quot
         .get(`https://api-alphabot.herokuapp.com/api/downloader/youtube/video?url=https://www.youtube.com/watch?v=`+VID+`&apikey=Alphabot`)
         .then(async (response) => {
           const {
-            dl_link,
+            dl_link,filesize,filesizeF
           } = response.data.results
+
+          if (filesize >= 100000) return await message.client.sendMessage(message.jid,cant_send+filesizeF+size_cant,MessageType.text , {quoted: message.data});
+    else{
           const videoBuffer = await axios.get(dl_link, {responseType: 'arraybuffer'})
           await message.client.sendMessage(message.jid,YSTV_UP,MessageType.text , {quoted: message.data});
           await message.client.sendMessage(message.jid,Buffer.from(videoBuffer.data), MessageType.video, {quoted: message.data ,mimetype: Mimetype.mp4, ptt: false})
-        })
-        
-}))
 
-
-// public mode for me
-
-lusifar.addCommand({ pattern: 'video ?(.*)', fromMe: PUBFM , desc: YTV_DESC}, (async (message, match) => { 
-
-await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data});   
-    
-    var VID = '';
-    try {
-            if (match[1].includes( 'shorts' )){
-            var rmx = match[1].replace( 'shorts/', '')
-            var rmy = rmx.replace( '?feature=share','')
-            var data = rmy.split( '/' )[3]
-            VID = data
-								
-         } else
-         
-         
-                 if (match[1].includes('watch')) {
-                var tsts = match[1].replace('watch?v=', '')
-                var alal = tsts.split('/')[3]
-                VID = alal
-            } 
-         
-       else {     
-				 VID = match[1].split('/')[3]
-            }
-        } catch {
-            return await message.client.sendMessage(message.jid,NO_RESULT,MessageType.text);
         }
-        await axios
-        .get(`https://api-alphabot.herokuapp.com/api/downloader/youtube/video?url=https://www.youtube.com/watch?v=`+VID+`&apikey=Alphabot`)
-        .then(async (response) => {
-          const {
-            dl_link,
-          } = response.data.results
-          const videoBuffer = await axios.get(dl_link, {responseType: 'arraybuffer'})
-          await message.client.sendMessage(message.jid,YSTV_UP,MessageType.text , {quoted: message.data});
-          await message.client.sendMessage(message.jid,Buffer.from(videoBuffer.data), MessageType.video, {quoted: message.data ,mimetype: Mimetype.mp4, ptt: false})
-        })
+    })
         
 }))
 
-
+lusifar.addCommand({pattern: 'video ?(.*)', fromMe: PUBFM , dontAddCommandList: true}, (async (message, match) => { 
+    if(match[1] === '') return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text , {quoted: message.data}); 
+    await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data});   
+        
+        var VID = '';
+        try {
+                if (match[1].includes( 'shorts' )){
+                var rmx = match[1].replace( 'shorts/', '')
+                var rmy = rmx.replace( '?feature=share','')
+                var data = rmy.split( '/' )[3]
+                VID = data
+                                    
+             } else
+             
+             
+                     if (match[1].includes('watch')) {
+                    var tsts = match[1].replace('watch?v=', '')
+                    var alal = tsts.split('/')[3]
+                    VID = alal
+                } 
+             
+           else {     
+                     VID = match[1].split('/')[3]
+                }
+            } catch {
+                return await message.client.sendMessage(message.jid,NO_RESULT,MessageType.text);
+            }
+            await axios
+            .get(`https://api-alphabot.herokuapp.com/api/downloader/youtube/video?url=https://www.youtube.com/watch?v=`+VID+`&apikey=Alphabot`)
+            .then(async (response) => {
+              const {
+                dl_link,filesize,filesizeF
+              } = response.data.results
+    
+              if (filesize >= 100000) return await message.client.sendMessage(message.jid,cant_send+filesizeF+size_cant,MessageType.text , {quoted: message.data});
+        else{
+              const videoBuffer = await axios.get(dl_link, {responseType: 'arraybuffer'})
+              await message.client.sendMessage(message.jid,YSTV_UP,MessageType.text , {quoted: message.data});
+              await message.client.sendMessage(message.jid,Buffer.from(videoBuffer.data), MessageType.video, {quoted: message.data ,mimetype: Mimetype.mp4, ptt: false})
+    
+            }
+        })
+            
+    }))
