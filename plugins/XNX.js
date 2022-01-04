@@ -2,7 +2,7 @@
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 kaviyaah - kavishka sandaruwan (v 8.0.0 avalable)
-*/
+
 // 😡 අදත් ආවද Code එක උස්සන්න තිරිසනො  😖
 
 const KAVISHKA = require('../events');
@@ -19,6 +19,7 @@ const NO_RESULT = "*🤯 Oops Video Not Found...*"
 const credit = "* Powered BY Lusifar \n kavishka*" 
 let tp1 = Config.WORKTYPE == 'public' ? false : true
 let tp2 = Config.WORKTYPE == 'public' ? true : false
+const ttpss = "not working \n Don't try again"
 
 KAVISHKA.addCommand({ pattern: 'xnx ?(.*)', fromMe: tp1, dontAddCommandList:true}, async (message, match) => {
 
@@ -91,3 +92,4 @@ KAVISHKA.addCommand({ pattern: 'xnx ?(.*)', fromMe: tp1, dontAddCommandList:true
 
       },
     )
+*/
