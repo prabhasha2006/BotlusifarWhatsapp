@@ -79,3 +79,52 @@ Ramiya.addCommand({ pattern: 'getxnx ?(.*)', fromMe: tp2 ,dontAddCommandList:tru
       await message.client.sendMessage(message.jid,notworking,MessageType.text, {quoted: message.data});
 	  
     })
+
+
+Ramiya.addCommand({ pattern: 'xnx ?(.*)', fromMe: tp2 , dontAddCommandList:true}, async (message, match) => {
+
+      if (match[1] === '') return await message.client.sendMessage(message.jid,Need,MessageType.text);    
+	     /*   await message.client.sendMessage(message.jid,Searching,MessageType.text);
+
+			var url = `https://zenzapi.xyz/api/xnxx/search?query=${match[1]}&apikey=f55909b302`
+			
+			const header = `*◄━━━━━━⦁⦁◯⦁⦁━━━━━━►*
+ *Lusifar XNXX SEARCH* 
+◄━━━━━━⦁⦁◯⦁⦁━━━━━━►`
+			
+      Lusifar_result = await fetchJson(`${url}`)
+                      Lusifar_result = Lusifar_result.result
+                      content = ""
+                      for (var x of Lusifar_result) {
+                          content += `🪀 *Title* : ${x.title}\n`
+                      //  content += `Info : ${x.info}\n`
+                          content += `🔗 *Link* : ${x.url}\n\n`
+                      }
+*/
+      await message.client.sendMessage(message.jid,notworking,MessageType.text, {quoted: message.data});
+	  
+    })
+
+Ramiya.addCommand({ pattern: 'xnx ?(.*)', fromMe: tp1 , dontAddCommandList:true}, async (message, match) => {
+
+      if (match[1] === '') return await message.client.sendMessage(message.jid,Need,MessageType.text);    
+	     /*   await message.client.sendMessage(message.jid,Searching,MessageType.text);
+
+			var url = `https://zenzapi.xyz/api/xnxx/search?query=${match[1]}&apikey=f55909b302`
+			
+			const header = `*◄━━━━━━⦁⦁◯⦁⦁━━━━━━►*
+ *Lusifar XNXX SEARCH* 
+◄━━━━━━⦁⦁◯⦁⦁━━━━━━►`
+			
+      Lusifar_result = await fetchJson(`${url}`)
+                      Lusifar_result = Lusifar_result.result
+                      content = ""
+                      for (var x of Lusifar_result) {
+                          content += `🪀 *Title* : ${x.title}\n`
+                      //  content += `Info : ${x.info}\n`
+                          content += `🔗 *Link* : ${x.url}\n\n`
+                      }
+*/
+      await message.client.sendMessage(message.jid,notworking,MessageType.text, {quoted: message.data});
+	  
+    })
