@@ -28,14 +28,14 @@ const Searching = "🔞 _*Searching Xnxx Adult Videos...*_"
 const credit = "* Powered BY Lusifar*" 
 let tp1 = Config.WORKTYPE == 'public' ? false : true
 let tp2 = Config.WORKTYPE == 'public' ? true : false
-
+const notworking = "Not working \n don't try again"
 
 	// -------------------------------------X-N-X-X--S-E-A-R-C-H------------------------------------------------------------------------
 	
 Ramiya.addCommand({ pattern: 'getxnx ?(.*)', fromMe: tp1 , dontAddCommandList:true}, async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,Need,MessageType.text);    
-	        await message.client.sendMessage(message.jid,Searching,MessageType.text);
+	     /*   await message.client.sendMessage(message.jid,Searching,MessageType.text);
 
 			var url = `https://zenzapi.xyz/api/xnxx/search?query=${match[1]}&apikey=f55909b302`
 			
@@ -51,15 +51,15 @@ Ramiya.addCommand({ pattern: 'getxnx ?(.*)', fromMe: tp1 , dontAddCommandList:tr
                       //  content += `Info : ${x.info}\n`
                           content += `🔗 *Link* : ${x.url}\n\n`
                       }
-
-      await message.client.sendMessage(message.jid,header+'\n\n'+content,MessageType.text, {quoted: message.data});
+*/
+      await message.client.sendMessage(message.jid,notworking,MessageType.text, {quoted: message.data});
 	  
     })
 	
 Ramiya.addCommand({ pattern: 'getxnx ?(.*)', fromMe: tp2 ,dontAddCommandList:true}, async (message, match) => {
 
       if (match[1] === '') return await message.client.sendMessage(message.jid,Need,MessageType.text);    
-	        await message.client.sendMessage(message.jid,Searching,MessageType.text);
+	    /*     await message.client.sendMessage(message.jid,Searching,MessageType.text);
 
 			var url = `https://zenzapi.xyz/api/xnxx/search?query=${match[1]}&apikey=f55909b302`
 			
@@ -75,7 +75,7 @@ Ramiya.addCommand({ pattern: 'getxnx ?(.*)', fromMe: tp2 ,dontAddCommandList:tru
                       //  content += `Info : ${x.info}\n`
                           content += `🔗 *Link* : ${x.url}\n\n`
                       }
-
-      await message.client.sendMessage(message.jid,header+'\n\n'+content,MessageType.text, {quoted: message.data});
+*/
+      await message.client.sendMessage(message.jid,notworking,MessageType.text, {quoted: message.data});
 	  
     })
