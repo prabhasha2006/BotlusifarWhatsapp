@@ -235,7 +235,7 @@ await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quot
             return await message.client.sendMessage(message.jid,NO_RESULT,MessageType.text);
         }
         await axios
-        .get(`https://api-alphabot.herokuapp.com/api/downloader/youtube/video?url=https://www.youtube.com/watch?v=`+VID+`&apikey=Alphabot`)
+        .get(`https://api-alphabot.herokuapp.com/api/downloader/youtube/playmp4?query=https://www.youtube.com/watch?v=`+VID+`&apikey=Alphabot`)
         .then(async (response) => {
           const {
             dl_link,filesize,filesizeF
@@ -280,7 +280,7 @@ lusifar.addCommand({pattern: 'video ?(.*)', fromMe: PUBFM , dontAddCommandList: 
                 return await message.client.sendMessage(message.jid,NO_RESULT,MessageType.text);
             }
             await axios
-            .get(`https://api-alphabot.herokuapp.com/api/downloader/youtube/video?url=https://www.youtube.com/watch?v=`+VID+`&apikey=Alphabot`)
+            .get(`https://api-alphabot.herokuapp.com/api/downloader/youtube/playmp4?query=https://www.youtube.com/watch?v=`+VID+`&apikey=Alphabot`)
             .then(async (response) => {
               const {
                 dl_link,filesize,filesizeF
