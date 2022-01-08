@@ -68,7 +68,7 @@ let SKS = config.WORKTYPE == 'public' ? true : true
 
 
 
-lusifar.addCommand({ pattern: 'song ?(.*)', fromMe: KSK, desc: Lang.SONG_DESC }, (async (message, match) => {
+lusifar.addCommand({ pattern: 'song ?(.*)', fromMe: KSK, dontAddCommandList:true }, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid, NEED_TEXT_SONG, MessageType.text, { quoted: message.data });
     await message.client.sendMessage(message.jid, config.SONGD, MessageType.text, { quoted: message.data });
