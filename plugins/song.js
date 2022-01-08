@@ -1,63 +1,39 @@
-/* Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
+/*
+Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 kaviyaah - kavishka sandaruwan (v 8.0.0 avalable)
-
-
-
+*/
 const lusifar = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
-const translatte = require('translatte');
 const config = require('../config');
-const LanguageDetect = require('languagedetect');
-const lngDetector = new LanguageDetect();
-const Heroku = require('heroku-client');
-const heroku = new Heroku({
-    token: config.HEROKU.API_KEY
-});
-let baseURI = '/apps/' + config.HEROKU.APP_NAME;
-//============================== LYRICS =============================================
 const axios = require('axios');
-const { requestLyricsFor, requestAuthorFor, requestTitleFor, requestIconFor } = require("solenolyrics");
-const solenolyrics= require("solenolyrics"); 
-//============================== CURRENCY =============================================
-const { exchangeRates } = require('exchange-rates-api');
-const ExchangeRatesError = require('exchange-rates-api/src/exchange-rates-error.js')
-//============================== TTS ==================================================
 const fs = require('fs');
-const https = require('https');
-const googleTTS = require('google-translate-tts');
-//=====================================================================================
-//============================== YOUTUBE ==============================================
 const ytdl = require('ytdl-core');
 const ffmpeg = require('fluent-ffmpeg');
 const yts = require( 'yt-search' )
 const got = require("got");
 const ID3Writer = require('browser-id3-writer');
-const SpotifyWebApi = require('spotify-web-api-node');
-
-const spotifyApi = new SpotifyWebApi({
-    clientId: 'acc6302297e040aeb6e4ac1fbdfd62c3',
-    clientSecret: '0e8439a1280a43aba9a5bc0a16f3f009'
-});
-//=====================================================================================
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
-const Glang = Language.getString('github');
-const Slang = Language.getString('lyrics');
-const Clang = Language.getString('covid');
+const NO_RESULT = "*🌀can't Find Anything...*"
+const NEED_TEXT_SONG = "*need word!.*"
+let KSK = config.WORKTYPE == 'public' ? false : true
+let SKS = config.WORKTYPE == 'public' ? true : true
 
 
-   
-       lusifar.addCommand({pattern: 'song ?(.*)', fromMe: true , desc: Lang.SONG_DESC}, (async (message, match) => { 
+    lusifar.addCommand({pattern: 'song ?(.*)', fromMe: SKS, desc: Lang.SONG_DESC}, (async (message, match) => {
 
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
+        if (match[1] === '') return await message.client.sendMessage(message.jid,NEED_TEXT_SONG,MessageType.text, {quoted: message.data});  
+        await message.client.sendMessage(message.jid, config.SONGD, MessageType.text, { quoted: message.data });
+
         let arama = await yts(match[1]);
         arama = arama.all;
-        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,config.SONGD,MessageType.text, {quoted: message.data});
-
+        if(arama.length < 1) return await message.client.sendMessage(message.jid,NO_RESULT,MessageType.text, {quoted: message.data});
+        
+        let thumbnail = arama[0].thumbnail.replace(' ', '+');
         let title = arama[0].title.replace(' ', '+');
+    
         let stream = ytdl(arama[0].videoId, {
             quality: 'highestaudio',
         });
@@ -76,47 +52,86 @@ const Clang = Language.getString('covid');
                         description: arama[0].description
                     });
                 writer.addTag();
+                const msg = '*🎼Song :- ' + title + '* \n\n' + '📁 Type :- MP3' + '\n\n' + '⚜️ *Download your song below 👇🏻* \n\n\n  _*powered by lusifar*_' 
+                var iavatar = await axios.get(thumbnail,{responseType: 'arraybuffer'});
+                 
+                 await message.client.sendMessage(message.jid, config.SONGU,MessageType.text, {quoted: message.data});
 
-                reply = await message.client.sendMessage(message.jid,config.SONGU,MessageType.text, {quoted: message.data});
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false, quoted: message.data});
+
+                await message.sendMessage(Buffer.from(iavatar.data), MessageType.image, { mimetype: Mimetype.jpg, caption: msg, quoted: message.data}); 
+                await message.client.sendMessage(message.jid, Buffer.from(writer.arrayBuffer), MessageType.audio, { mimetype: 'audio/mpeg', quoted: message.data })
+                await message.client.sendMessage(message.jid, Buffer.from(writer.arrayBuffer), MessageType.document, { filename: title + '.mp3', mimetype: 'audio/mpeg', ptt: false, quoted: message.data});
+
+
             });
     }));
-    
 
 
-       lusifar.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
 
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
-        let arama = await yts(match[1]);
-        arama = arama.all;
-        if(arama.length < 1) return await message.client.sendMessage(message.jid,Lang.NO_RESULT,MessageType.text);
-        var reply = await message.client.sendMessage(message.jid,config.SONGD,MessageType.text, {quoted: message.data});
+lusifar.addCommand({ pattern: 'song ?(.*)', fromMe: KSK, desc: Lang.SONG_DESC }, (async (message, match) => {
 
-        let title = arama[0].title.replace(' ', '+');
-        let stream = ytdl(arama[0].videoId, {
-            quality: 'highestaudio',
+    if (match[1] === '') return await message.client.sendMessage(message.jid, NEED_TEXT_SONG, MessageType.text, { quoted: message.data });
+    await message.client.sendMessage(message.jid, config.SONGD, MessageType.text, { quoted: message.data });
+
+    let arama = await yts(match[1]);
+    arama = arama.all;
+    if (arama.length < 1) return await message.client.sendMessage(message.jid, NO_RESULT, MessageType.text, { quoted: message.data });
+
+    let thumbnail = arama[0].thumbnail.replace(' ', '+');
+    let title = arama[0].title.replace(' ', '+');
+
+    let stream = ytdl(arama[0].videoId, {
+        quality: 'highestaudio',
+    });
+
+    got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
+    ffmpeg(stream)
+        .audioBitrate(320)
+        .save('./' + title + '.mp3')
+        .on('end', async () => {
+            const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
+            writer.setFrame('TIT2', arama[0].title)
+                .setFrame('TPE1', [arama[0].author.name])
+                .setFrame('APIC', {
+                    type: 3,
+                    data: fs.readFileSync(title + '.jpg'),
+                    description: arama[0].description
+                });
+            writer.addTag();
+            const msg = '*🎼Song :- ' + title + '* \n\n' + '📁 Type :- MP3' + '\n\n' + '⚜️ *Download your song below 👇🏻* \n\n\n  _*powered by lusifar*_'
+            var iavatar = await axios.get(thumbnail, { responseType: 'arraybuffer' });
+
+            await message.client.sendMessage(message.jid, config.SONGU, MessageType.text, { quoted: message.data });
+
+
+            await message.sendMessage(Buffer.from(iavatar.data), MessageType.image, { mimetype: Mimetype.jpg, caption: msg, quoted: message.data });
+            await message.client.sendMessage(message.jid, Buffer.from(writer.arrayBuffer), MessageType.audio, { mimetype: 'audio/mpeg', quoted: message.data })
+            await message.client.sendMessage(message.jid, Buffer.from(writer.arrayBuffer), MessageType.document, { filename: title + '.mp3', mimetype: 'audio/mpeg', ptt: false, quoted: message.data });
+
+
         });
-    
-        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
-        ffmpeg(stream)
-            .audioBitrate(320)
-            .save('./' + title + '.mp3')
-            .on('end', async () => {
-                const writer = new ID3Writer(fs.readFileSync('./' + title + '.mp3'));
-                writer.setFrame('TIT2', arama[0].title)
-                    .setFrame('TPE1', [arama[0].author.name])
-                    .setFrame('APIC', {
-                        type: 3,
-                        data: fs.readFileSync(title + '.jpg'),
-                        description: arama[0].description
-                    });
-                writer.addTag();
+}));
 
-                reply = await message.client.sendMessage(message.jid,config.SONGU,MessageType.text, {quoted: message.data});
-                await message.client.sendMessage(message.jid,Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false, quoted: message.data});
-            });
-    }));
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 
 
 const lusifar = require('../events');
@@ -174,3 +189,4 @@ let KSK = config.WORKTYPE == 'public' ? false : true
         )
       },
     )
+*/
