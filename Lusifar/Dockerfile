@@ -1,6 +1,6 @@
 FROM fusuf/whatsasena:latest
 
-RUN git clone https://github.com/kavishkaya/BotlusifarWhatsapp /root/LUSIFARWABOT
+RUN git clone $GITHUB_REPO_URL /root/LUSIFARWABOT
 WORKDIR /root/LUSIFARWABOT/
 RUN git clone https://github.com/kavishkaya/uploads
 ENV TZ=Europe/Istanbul
