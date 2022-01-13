@@ -238,6 +238,7 @@ lusifar.addCommand({pattern: 'video ?(.*)', fromMe: PUBFM , dontAddCommandList: 
 
 
 
+
 const lusifar = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
@@ -255,7 +256,7 @@ let SKS = config.WORKTYPE == 'public' ? true : true
         
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
-        await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text)
+        await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data}); 
         await axios
           .get(`https://rei-api.herokuapp.com/api/dl/ytav?url=${linkk}`)
           .then(async (response) => {
@@ -266,7 +267,7 @@ let SKS = config.WORKTYPE == 'public' ? true : true
             const videoBuffer = await axios.get(thumb, {responseType: 'arraybuffer'})
             
             const cptt = "*📑Title:*  " + title + "\n\n" + "*📅Uploded date:* " + published + "\n\n" + "*🎞️ Channel name:* " +  channel + "\n\n" + "*👁️Views:* " + views
-            await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text)
+            await message.client.sendMessage(message.jid,YTV_UP,MessageType.text , {quoted: message.data}); 
             await message.client.sendMessage(message.jid,Buffer.from(videoBuffer.data), MessageType.image, {quoted: message.data ,mimetype: Mimetype.jpg, ptt: false,caption: cptt})
         });
             await axios
@@ -291,7 +292,7 @@ let SKS = config.WORKTYPE == 'public' ? true : true
         
         const linkk = match[1]
         if (!linkk) return await message.client.sendMessage(message.jid,YT_NEED,MessageType.text)
-        await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text)
+        await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text , {quoted: message.data}); 
         await axios
           .get(`https://rei-api.herokuapp.com/api/dl/ytav?url=${linkk}`)
           .then(async (response) => {
@@ -302,7 +303,7 @@ let SKS = config.WORKTYPE == 'public' ? true : true
             const videoBuffer = await axios.get(thumb, {responseType: 'arraybuffer'})
             
             const cptt = "*📑Title:*  " + title + "\n\n" + "*📅Uploded date:* " + published + "\n\n" + "*🎞️ Channel name:* " +  channel + "\n\n" + "*👁️Views:* " + views
-            await message.client.sendMessage(message.jid,DWLOAD_VID,MessageType.text)
+            await message.client.sendMessage(message.jid,YTV_UP,MessageType.text , {quoted: message.data}); 
             await message.client.sendMessage(message.jid,Buffer.from(videoBuffer.data), MessageType.image, {quoted: message.data ,mimetype: Mimetype.jpg, ptt: false,caption: cptt})
         });
             await axios
