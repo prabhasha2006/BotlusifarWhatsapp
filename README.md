@@ -4,5 +4,5 @@
 
 
 #tap this to deploy bot
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kavishkaya/BotlusifarWhatsapp)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kaviyaah2/BotlusifarWhatsapp)
      </div>
