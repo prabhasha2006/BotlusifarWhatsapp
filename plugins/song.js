@@ -3,7 +3,7 @@ Copyright (C) 2021 KAVIYAAH - Alexa Team  ,  Lusifar whatsapp bot owner
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 kaviyaah - kavishka sandaruwan (v 8.0.0 avalable)
-*/
+
 const lusifar = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const config = require('../config');
@@ -117,6 +117,7 @@ lusifar.addCommand({ pattern: 'song ?(.*)', fromMe: KSK, dontAddCommandList:true
 
 
 
+*/
 
 
 
@@ -130,8 +131,6 @@ lusifar.addCommand({ pattern: 'song ?(.*)', fromMe: KSK, dontAddCommandList:true
 
 
 
-
-/*
 
 
 const lusifar = require('../events');
@@ -189,4 +188,3 @@ let KSK = config.WORKTYPE == 'public' ? false : true
         )
       },
     )
-*/
